@@ -9,6 +9,7 @@ module.exports = {
       colors: {
         "primary-color": "rgb(var(--color-primary) / <alpha-value>)",
         "secondary-color": "rgb(var(--color-secondary) / <alpha-value>)",
+        "tertiary-color": "rgb(var(--color-tertiary) / <alpha-value>)",
       },
     },
   },

@@ -6,6 +6,7 @@
   :root {
     --color-primary: 6 128 239;
     --color-secondary: 210 210 212;
+    --color-tertiary: 114 114 115;
     background: rgb(18 18 18);
     font-family: "Poppins";
   }

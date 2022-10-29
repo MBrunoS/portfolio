@@ -1,4 +1,8 @@
 import Head from "next/head";
+import Image from "next/image";
+import { Navbar } from "../components/Navbar";
+import { SocialLinks } from "../components/SocialLinks";
+import profileImg from "../../public/profile-pic.png";
 
 export default function Home() {
   return (
@@ -12,24 +16,22 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <nav className="fixed bg-zinc-900 w-full p-4">
-        <div className="left">
-          <span className="text-primary-color uppercase text-4xl font-black">
-            MB
-          </span>
-        </div>
-      </nav>
+      <Navbar />
 
-      <section className="flex flex-row items-center justify-center pt-20 h-[90vh] text-center">
-        <div>
-          <p className="text-secondary-color uppercase mb-2">
-            Desenvolvedor Front-end
-          </p>
-          <h1 className="text-primary-color uppercase text-4xl font-black">
-            Maurício Bruno
-          </h1>
-          <div className="flex"></div>
-        </div>
+      <section className="flex flex-col items-center justify-center pt-20 h-[90vh]">
+        <Image
+          src={profileImg}
+          alt="Maurício Bruno"
+          placeholder="blur"
+          className="max-w-[180px] mb-10 border-4 border-primary-color rounded-full"
+        />
+        <p className="text-secondary-color uppercase">
+          Desenvolvedor Front-end
+        </p>
+        <h1 className="text-primary-color uppercase text-4xl font-black my-2">
+          Maurício Bruno
+        </h1>
+        <SocialLinks />
       </section>
     </>
   );
