@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 6 128 239;
+    --color-secondary: 210 210 212;
+    background: rgb(18 18 18);
+    font-family: "Poppins";
+  }
+}
