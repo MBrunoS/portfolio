@@ -1,8 +1,7 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Navbar } from "../components/Navbar";
 import { SocialLinks } from "../components/SocialLinks";
-import profileImg from "../../public/profile-pic.png";
+import { ProfilePic } from "../components/ProfilePic";
 
 export default function Home() {
   return (
@@ -19,12 +18,7 @@ export default function Home() {
       <Navbar />
 
       <section className="flex flex-col items-center justify-center pt-20 h-[90vh]">
-        <Image
-          src={profileImg}
-          alt="Maurício Bruno"
-          placeholder="blur"
-          className="max-w-[180px] mb-10 border-4 border-primary-color rounded-full"
-        />
+        <ProfilePic />
         <p className="text-secondary-color uppercase">
           Desenvolvedor Front-end
         </p>
