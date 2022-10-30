@@ -15,8 +15,8 @@ export const SocialLinks: React.FC = () => {
 
   return (
     <div className="flex justify-center gap-5">
-      {links.map((link) => (
-        <Link href={link.url} target="_blank">
+      {links.map((link, i) => (
+        <Link href={link.url} target="_blank" key={i}>
           <link.Icon className="text-4xl text-tertiary-color hover:text-secondary-color transition-colors" />
         </Link>
       ))}
