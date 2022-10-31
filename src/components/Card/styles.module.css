@@ -1,9 +1,0 @@
-.card {
-  background: linear-gradient(
-      to bottom left,
-      rgba(12, 21, 28, 0.35) 0%,
-      rgba(22, 53, 77, 0.35) 100%
-    ),
-    linear-gradient(0deg, #16354d, #16354d);
-  border: 1px solid rgba(22, 53, 77, 1);
-}

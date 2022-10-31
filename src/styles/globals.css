@@ -4,9 +4,10 @@
 
 @layer base {
   :root {
-    --color-primary: 6 128 239;
-    --color-secondary: 210 210 212;
-    --color-tertiary: 114 114 115;
+    --primary-color: 6 128 239;
+    --secondary-color: 210 210 212;
+    --disabled-color: 114 114 115;
+    --highlight-color: 22 53 77;
     background: rgb(18 18 18);
     font-family: "Poppins";
   }

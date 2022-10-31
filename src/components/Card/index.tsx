@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./styles.module.css";
 
 interface Props {
   children: React.ReactNode;
@@ -7,14 +6,10 @@ interface Props {
   className?: string;
 }
 
-export const Card: React.FC<Props> = ({
-  children,
-  textAlign = "left",
-  className,
-}) => {
+export const Card: React.FC<Props> = ({ children, className }) => {
   return (
     <div
-      className={`bg-gradient-to-bl rounded-2xl p-3 border-1 text-white ${className} ${styles.card}`}
+      className={`bg-gradient-to-bl rounded-2xl p-3 border-1 text-white ${className}`}
     >
       {children}
     </div>
