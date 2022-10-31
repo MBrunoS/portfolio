@@ -10,7 +10,6 @@ export const SocialLinks: React.FC = () => {
       url: "https://www.linkedin.com/in/mauricio-bruno-da-silva",
       Icon: FaLinkedin,
     },
-    { url: "", Icon: BsFileEarmarkPerson },
   ];
 
   return (

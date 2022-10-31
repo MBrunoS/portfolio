@@ -1,0 +1,9 @@
+.arrow {
+  animation: move-up-down 2s infinite ease-in-out;
+}
+
+@keyframes move-up-down {
+  50% {
+    transform: translateY(-50%);
+  }
+}
