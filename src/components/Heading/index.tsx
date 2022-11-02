@@ -1,15 +1,22 @@
 import React from "react";
 
-interface Props {
+interface HeadingProps {
   as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   children: React.ReactNode;
 }
 
-export const Heading: React.FC<Props> = ({ as, children }) => {
+export const Heading: React.FC<HeadingProps> = ({ as, children }) => {
   const Tag = as || "h1";
 
+  if (Tag === "h1")
+    return (
+      <h1 className="text-primary-color uppercase text-4xl lg:text-5xl font-black my-2">
+        {children}
+      </h1>
+    );
+
   return (
-    <Tag className="text-primary-color uppercase text-4xl font-black my-2">
+    <Tag className="text-primary-color uppercase text-3xl lg:text-4xl font-black my-2">
       {children}
     </Tag>
   );

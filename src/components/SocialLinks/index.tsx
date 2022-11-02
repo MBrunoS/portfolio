@@ -1,6 +1,5 @@
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { BsFileEarmarkPerson } from "react-icons/bs";
 import Link from "next/link";
 
 export const SocialLinks: React.FC = () => {
