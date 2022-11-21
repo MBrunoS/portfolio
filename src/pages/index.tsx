@@ -11,7 +11,9 @@ import { useRef } from "react";
 
 export default function Home() {
   const webDevAnimRef = useRef<LottieRefCurrentProps>(null);
-  webDevAnimRef.current?.setSpeed(0.5);
+  webDevAnimRef.current?.setSpeed(0.75);
+
+  const year = new Date().getFullYear();
 
   return (
     <>
@@ -28,54 +30,62 @@ export default function Home() {
 
       <section className="flex flex-col items-center justify-center h-screen relative">
         <ProfilePic />
-        <p className="mt-10 text-secondary-color uppercase">
-          Desenvolvedor Front-end
-        </p>
-        <Heading>Maurício Bruno</Heading>
+        <div className="mt-10 mb-4 text-center">
+          <Heading>Maurício Bruno</Heading>
+          <p className="text-secondary-color uppercase text-lg">
+            Desenvolvedor Front-end
+          </p>
+        </div>
         <SocialLinks />
 
         <DownArrow />
       </section>
 
-      <section className="text-center py-8 px-2.5 sm:px-5 md:px-20">
+      <section className="text-center py-16 px-4 sm:px-6 md:px-20 bg-card-gradient border-y border-solid border-highlight-color backdrop-blur-xl">
         <Heading as="h2">Quem sou eu</Heading>
-        <div className="flex flex-col lg:flex-row basis-1/2 gap-4 md:gap-12 lg:gap-36 items-center justify-around mt-8 lg:mt-0">
-          <Card className="text-left">
-            Natural do Rio Grande do Norte, desde 2013 sou apaixonado por
-            desenvolvimento web e fascinado por tudo que é possível criar com
-            essas tecnologias.
+        <div className="flex flex-col lg:flex-row basis-1/2 gap-4 md:gap-12 lg:gap-36 items-center justify-around mt-8 lg:mt-2">
+          <p className="text-left text-secondary-color md:text-lg">
+            Entusiasta do universo front-end desde 2013 e fascinado por tudo que
+            é possível criar com essas tecnologias.
             <br />
             <br />
-            Procuro sempre estar atualizado às tecnologias mais modernas e
-            eficazes, para entregar uma experiência incrível em cada projeto.
+            Procuro sempre estar atualizado às tecnologias e conceitos mais
+            modernos para poder entregar uma experiência incrível em cada
+            projeto.
             <br />
             <br />
-            Atualmente, minhas ferramentas preferidas são: React, Typescript,
-            Vite, Next.js, Prisma e TailwindCSS.
-          </Card>
-          <Lottie
-            animationData={webDevAnimation}
-            loop={true}
-            lottieRef={webDevAnimRef}
-            className="shrink-0"
-          />
+            Meus pontos fortes são: Javascript, Typescript, React, HTML/CSS e
+            algoritmos.
+            <br />
+            <br />
+            Ferramentas favoritas: Vite, Next.js, Prisma e TailwindCSS.
+          </p>
+          <Lottie animationData={webDevAnimation} lottieRef={webDevAnimRef} />
         </div>
       </section>
 
-      <section className="text-center py-8 px-2.5 sm:px-5 md:px-20">
+      <section className="text-center py-16 px-4 sm:px-6 md:px-20">
         <Heading as="h2">Projetos</Heading>
         <div className="flex flex-col md:flex-row gap-4 items-center justify-around mt-8">
           <Card className="md:w-1/2 lg:w-1/3">
-            <h3 className="font-bold text-2xl">NLW eSports</h3>
+            <h3 className="font-bold text-2xl mb-2 text-white">NLW eSports</h3>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure
-              harum omnis delectus explicabo nesciunt tempore quo repellat
-              assumenda, accusamus laborum aliquid error sit veritatis ullam
-              voluptate dolore provident laboriosam neque?
+              Plataforma para jogadores encontrarem parceiros de gameplay.
+              Criado com base no evento NLW eSports da Rocketseat.
             </p>
+            <a
+              className="inline-block bg-primary-color rounded px-4 py-2 mt-4 text-white"
+              href="https://nlw-esports-mbrunos.vercel.app/"
+              target="_blank"
+            >
+              Acessar demo
+            </a>
           </Card>
         </div>
       </section>
+      <footer className="bg-card-gradient py-4 border-t border-solid border-highlight-color text-secondary-color text-center sm:px-6 md:px-20 backdrop-blur-xl">
+        Maurício Bruno @ {year}
+      </footer>
     </>
   );
 }

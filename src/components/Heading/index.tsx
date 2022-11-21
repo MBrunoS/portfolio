@@ -10,13 +10,13 @@ export const Heading: React.FC<HeadingProps> = ({ as, children }) => {
 
   if (Tag === "h1")
     return (
-      <h1 className="text-primary-color uppercase text-4xl lg:text-5xl font-black my-2">
+      <h1 className="text-primary-color uppercase text-4xl lg:text-6xl font-black">
         {children}
       </h1>
     );
 
   return (
-    <Tag className="text-primary-color uppercase text-3xl lg:text-4xl font-black my-2">
+    <Tag className="text-primary-color uppercase text-4xl lg:text-5xl font-black">
       {children}
     </Tag>
   );
