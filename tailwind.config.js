@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        kanit: "Kanit",
+      },
       colors: {
         "primary-color": "rgb(var(--primary-color) / <alpha-value>)",
         "secondary-color": "rgb(var(--secondary-color) / <alpha-value>)",
