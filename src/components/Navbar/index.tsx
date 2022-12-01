@@ -1,17 +1,17 @@
 import React from "react";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
-import Link from "next/link";
 
 export const Navbar: React.FC = () => {
   return (
     <NavigationMenu.Root className="fixed bg-zinc-900/70 w-full p-4 z-10 backdrop-blur-md flex items-center justify-between">
       <NavigationMenu.List>
         <NavigationMenu.Item>
-          <Link href="/" passHref>
-            <NavigationMenu.Link className="text-primary-color text-4xl font-black font-kanit">
-              MB
-            </NavigationMenu.Link>
-          </Link>
+          <NavigationMenu.Link
+            href="/"
+            className="text-primary-color text-4xl font-black font-kanit"
+          >
+            MB
+          </NavigationMenu.Link>
         </NavigationMenu.Item>
       </NavigationMenu.List>
 
