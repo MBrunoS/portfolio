@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import profileImg from "../../../public/profile-pic.png";
+import profileImg from "../../assets/profile-pic.png";
 
 export const ProfilePic: React.FC = () => {
   return (
