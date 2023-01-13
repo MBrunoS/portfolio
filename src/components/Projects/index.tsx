@@ -1,8 +1,8 @@
 import React from "react";
-import { Fade } from "react-awesome-reveal";
 import { Heading } from "../Heading";
 import nlw from "../../assets/nlw.png";
 import sorriso from "../../assets/sorriso.png";
+import devconnect from "../../assets/devconnect.png";
 import { ProjectCard } from "./ProjectCard";
 
 export const Projects: React.FC = () => {
@@ -18,6 +18,21 @@ export const Projects: React.FC = () => {
             code: "https://github.com/MBrunoS/nlw-esports-next",
           }}
           badges={["Next.js", "Typescript", "Tailwind", "Prisma"]}
+        >
+          <p>
+            Plataforma para jogadores encontrarem parceiros de gameplay. Criado
+            com base no evento NLW eSports da Rocketseat.
+          </p>
+        </ProjectCard>
+
+        <ProjectCard
+          title="DevConnect"
+          imgSrc={devconnect}
+          links={{
+            demo: "https://devconnect.mbrunos.dev/",
+            code: "https://github.com/MBrunoS/devconnect",
+          }}
+          badges={["Next.js", "Typescript", "Prisma", "Markdoc"]}
         >
           <p>
             Plataforma para jogadores encontrarem parceiros de gameplay. Criado
