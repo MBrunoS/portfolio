@@ -11,6 +11,18 @@ export const Projects: React.FC = () => {
       <Heading as="h2">Projetos</Heading>
       <div className="flex flex-col md:flex-row gap-4 items-center justify-around mt-8">
         <ProjectCard
+          title="DevConnect"
+          imgSrc={devconnect}
+          links={{
+            demo: "https://devconnect.mbrunos.dev/",
+            code: "https://github.com/MBrunoS/devconnect",
+          }}
+          badges={["Next.js", "Typescript", "Prisma", "Markdoc"]}
+        >
+          <p>Plataform de rede social para devs poderem se conectar</p>
+        </ProjectCard>
+
+        <ProjectCard
           title="NLW eSports"
           imgSrc={nlw}
           links={{
@@ -26,33 +38,15 @@ export const Projects: React.FC = () => {
         </ProjectCard>
 
         <ProjectCard
-          title="DevConnect"
-          imgSrc={devconnect}
-          links={{
-            demo: "https://devconnect.mbrunos.dev/",
-            code: "https://github.com/MBrunoS/devconnect",
-          }}
-          badges={["Next.js", "Typescript", "Prisma", "Markdoc"]}
-        >
-          <p>
-            Plataforma para jogadores encontrarem parceiros de gameplay. Criado
-            com base no evento NLW eSports da Rocketseat.
-          </p>
-        </ProjectCard>
-
-        <ProjectCard
           title="Clínica Sorriso e Cia"
           imgSrc={sorriso}
           links={{
-            demo: "https://clinicasorrisoecia.com.br/",
+            demo: "https://clinicasorrisoecia.com.br/agendamento",
             code: "https://github.com/Reach-Digital-Marketing/reach-scheduling",
           }}
           badges={["WordPress", "React", "PHP"]}
         >
-          <p>
-            Landing Page para apresentação de clínica odontológica, e página
-            para agendamento de consultas
-          </p>
+          <p>Plugin para agendamento de consultas na clínica</p>
         </ProjectCard>
       </div>
     </>
