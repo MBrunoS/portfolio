@@ -27,6 +27,15 @@ export const Navbar: React.FC = () => {
 
         <NavigationMenu.Item>
           <NavigationMenu.Link
+            href="#jobs"
+            className="text-secondary-color hover:text-primary-color"
+          >
+            Trabalhos
+          </NavigationMenu.Link>
+        </NavigationMenu.Item>
+
+        <NavigationMenu.Item>
+          <NavigationMenu.Link
             href="#projects"
             className="text-secondary-color hover:text-primary-color"
           >

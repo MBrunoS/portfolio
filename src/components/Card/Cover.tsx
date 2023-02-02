@@ -1,10 +1,11 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import React from "react";
+import { FiExternalLink } from "react-icons/fi";
 
 interface CoverCardProps {
   children: React.ReactNode;
-  imgUrl: string;
+  imgUrl: string | StaticImageData;
   title: string;
   link: string;
 }
@@ -16,7 +17,7 @@ export const CoverCard: React.FC<CoverCardProps> = ({
   link,
 }) => {
   return (
-    <div className="max-w-sm bg-card-gradient border border-solid border-highlight-color rounded-2xl border-1 overflow-hidden">
+    <div className="w-full sm-w-[24rem] bg-card-gradient border border-solid border-highlight-color rounded-2xl border-1 overflow-hidden">
       <Image
         src={imgUrl}
         alt={title}
@@ -26,8 +27,13 @@ export const CoverCard: React.FC<CoverCardProps> = ({
 
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-4 text-primary-color">
-          <Link href={link} className="hover:underline">
+          <Link
+            href={link}
+            className="hover:underline inline-flex gap-2 items-center"
+            target="_blank"
+          >
             {title}
+            <FiExternalLink />
           </Link>
         </div>
         <p className="text-secondary-color text-base">{children}</p>

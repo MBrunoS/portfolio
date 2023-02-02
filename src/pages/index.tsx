@@ -10,6 +10,7 @@ import webDevAnimation from "../assets/web_dev.json";
 import { Projects } from "../components/Projects";
 import { Section } from "../components/Section";
 import { CoverCard } from "../components/Card/Cover";
+import Jobs from "../components/Jobs";
 
 export default function Home() {
   const webDevAnimRef = useRef<LottieRefCurrentProps>(null);
@@ -73,7 +74,17 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section id="projects">
+      <Section id="jobs">
+        <Heading as="h2">Trabalhos</Heading>
+        <p className="text-secondary-color mt-2">Meus últimos trabalhos</p>
+        <Jobs />
+      </Section>
+
+      <Section id="projects" variant="featured">
+        <Heading as="h2">Projetos</Heading>
+        <p className="text-secondary-color mt-2">
+          Projetos desenvolvidos para aprimorar minhas habilidades
+        </p>
         <Projects />
       </Section>
 
