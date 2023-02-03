@@ -8,7 +8,8 @@ export const Navbar: React.FC = () => {
         <NavigationMenu.Item>
           <NavigationMenu.Link
             href="/"
-            className="text-primary-color text-4xl font-black font-kanit"
+            className="text-primary-color text-4xl font-black"
+            id="home"
           >
             MB
           </NavigationMenu.Link>

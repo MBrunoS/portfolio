@@ -17,7 +17,8 @@ export default function App({ Component, pageProps }: AppProps) {
         h3,
         h4,
         h5,
-        h6 {
+        h6,
+        #home {
           font-family: ${catamaran.style.fontFamily};
         }
       `}</style>
