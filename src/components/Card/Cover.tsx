@@ -17,7 +17,7 @@ export const CoverCard: React.FC<CoverCardProps> = ({
   link,
 }) => {
   return (
-    <div className="w-full sm-w-[24rem] bg-card-gradient border border-solid border-highlight-color rounded-2xl border-1 overflow-hidden">
+    <div className="w-full sm:w-[24rem] bg-card-gradient border border-solid border-highlight-color rounded-2xl border-1 overflow-hidden">
       <Image
         src={imgUrl}
         alt={title}

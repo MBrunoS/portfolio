@@ -4,7 +4,7 @@ import ia from "../../assets/ia.webp";
 import sorriso from "../../assets/sorriso.webp";
 import wood from "../../assets/wood.webp";
 
-const Jobs: React.FC = () => {
+export const Jobs: React.FC = () => {
   const jobList = [
     {
       title: "Inglês Aplicado",
@@ -43,5 +43,3 @@ const Jobs: React.FC = () => {
     </div>
   );
 };
-
-export default Jobs;

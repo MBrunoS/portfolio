@@ -18,12 +18,13 @@ export const Projects: React.FC = () => {
 
   return (
     <div className="flex flex-col md:flex-row gap-4 items-center justify-around mt-8">
-      {projects.map((project) => (
+      {projects.map((project, i) => (
         <ProjectCard
           title={project.title}
           imgSrc={project.imgSrc}
           links={project.links}
           badges={project.badges}
+          key={i}
         >
           <p>{project.description}</p>
         </ProjectCard>

@@ -6,11 +6,11 @@ import { SocialLinks } from "../components/SocialLinks";
 import { ProfilePic } from "../components/ProfilePic";
 import { DownArrow } from "../components/DownArrow";
 import { Heading } from "../components/Heading";
-import webDevAnimation from "../assets/web_dev.json";
 import { Projects } from "../components/Projects";
 import { Section } from "../components/Section";
 import { CoverCard } from "../components/Card/Cover";
-import Jobs from "../components/Jobs";
+import { Jobs } from "../components/Jobs";
+import webDevAnimation from "../assets/web_dev.json";
 
 export default function Home() {
   const webDevAnimRef = useRef<LottieRefCurrentProps>(null);
@@ -91,7 +91,7 @@ export default function Home() {
       <Section id="articles">
         <Heading as="h2">Artigos</Heading>
 
-        <div className="flex justify-center mt-12">
+        <div className="flex flex-col md:flex-row gap-4 items-center justify-around mt-8">
           <CoverCard
             imgUrl="https://community.revelo.com/content/images/size/w600/2022/11/BLOG-BR---Criando-um-plugin-no-WordPress-com-React.png"
             title="Criando um plugin no WordPress com React"
