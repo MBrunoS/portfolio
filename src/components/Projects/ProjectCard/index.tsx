@@ -1,6 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import React from "react";
+import { Button } from "../../Button";
 import { Card } from "../../Card";
 
 interface ProjectCardProps {
@@ -31,21 +32,13 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         <h3 className="font-bold text-2xl mt-5 mb-2 text-white">{title}</h3>
         {children}
         {links.demo && (
-          <Link
-            className="inline-block bg-primary-color rounded px-4 py-2 mt-4 mr-2 text-white hover:brightness-75"
-            href={links.demo}
-            target="_blank"
-          >
-            Demo
+          <Link href={links.demo} target="_blank">
+            <Button>Demo</Button>
           </Link>
         )}
         {links.code && (
-          <Link
-            className="inline-block bg-secondary-color rounded px-4 py-2 mt-4 ml-2 text-highlight-color hover:brightness-75"
-            href={links.code}
-            target="_blank"
-          >
-            Código
+          <Link href={links.code} target="_blank">
+            <Button variant="secondary">Código</Button>
           </Link>
         )}
         <div className="flex flex-wrap mt-4 justify-center items-center gap-2">

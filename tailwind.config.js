@@ -20,6 +20,9 @@ module.exports = {
         "card-gradient":
           "linear-gradient(to bottom left, rgba(12, 21, 28, 0.35) 0%, rgb(var(--highlight-color) / 0.35) 100%)",
       },
+      boxShadow: {
+        button: "0px 0px 20px 0px rgb(var(--primary-color) / 0.5)",
+      },
       animation: {
         glow: "glow 8s ease-in-out infinite",
       },
