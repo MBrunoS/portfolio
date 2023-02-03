@@ -1,12 +1,12 @@
 import React from "react";
-import devconnect from "../../assets/devconnect.png";
+import devconnect from "../../assets/devconnect.webp";
 import { ProjectCard } from "./ProjectCard";
 
 export const Projects: React.FC = () => {
   const projects = [
     {
       title: "DevConnect",
-      description: "Plataform de rede social para devs poderem se conectar",
+      description: "Plataforma de rede social para devs poderem se conectar",
       imgSrc: devconnect,
       links: {
         demo: "https://devconnect.mbrunos.dev/",
