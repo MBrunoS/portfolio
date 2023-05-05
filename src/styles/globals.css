@@ -22,6 +22,8 @@
     --bg-aspect-ratio: calc(var(--bg-image-aspect-ratio) / var(--bg-scale));
     --bg-gradient-size: calc(var(--bg-scale) * 100%);
     --bg-color: #090b11;
+
+    letter-spacing: 0.01em;
   }
 
   html {

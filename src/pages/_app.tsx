@@ -1,16 +1,16 @@
 import type { AppProps } from "next/app";
-import { Catamaran, Open_Sans } from "@next/font/google";
+import { Rubik, Public_Sans } from "next/font/google";
 import "../styles/globals.css";
 
-const catamaran = Catamaran({ subsets: ["latin"] });
-const openSans = Open_Sans({ subsets: ["latin"] });
+const rubik = Rubik({ subsets: ["latin"], weight: ["400", "700"] });
+const publicSans = Public_Sans({ subsets: ["latin"], weight: ["400", "700"] });
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <style jsx global>{`
         :root {
-          font-family: ${openSans.style.fontFamily};
+          font-family: ${publicSans.style.fontFamily};
         }
         h1,
         h2,
@@ -19,7 +19,7 @@ export default function App({ Component, pageProps }: AppProps) {
         h5,
         h6,
         #home {
-          font-family: ${catamaran.style.fontFamily};
+          font-family: ${rubik.style.fontFamily};
         }
       `}</style>
       <Component {...pageProps} />
