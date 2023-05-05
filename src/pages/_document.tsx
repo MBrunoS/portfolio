@@ -9,7 +9,9 @@ export default class Document extends NextDocument {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <body>
-          <Main />
+          <div className="backgrounds">
+            <Main />
+          </div>
           <NextScript />
         </body>
       </Html>
