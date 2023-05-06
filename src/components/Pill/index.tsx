@@ -6,7 +6,7 @@ type PillProps = {
 
 export const Pill: React.FC<PillProps> = ({ children }) => {
   return (
-    <div className="flex items-center gap-2 rounded-full bg-primary-color text-white px-4 py-2 text-lg">
+    <div className="flex items-center gap-2 rounded-full bg-primary-color text-white px-4 py-2 md:text-lg">
       {children}
     </div>
   );

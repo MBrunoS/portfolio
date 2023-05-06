@@ -22,7 +22,7 @@ export const Navbar: React.FC = () => {
 
   return (
     <NavigationMenu.Root
-      className={`fixed w-full px-20 py-10 z-10 flex items-center justify-between transition ${
+      className={`fixed w-full p-4 md:px-20 md:py-10 z-10 flex flex-col md:flex-row gap-2 items-center justify-between transition ${
         isScrolling && "bg-zinc-900/70 backdrop-blur-md"
       }`}
     >

@@ -33,13 +33,13 @@ export default function Home() {
 
       <Hero title="Maurício Bruno" tagline="Full-Stack Developer">
         <Pill>
-          <Code size={24} /> Developer
+          <Code size={20} /> Developer
         </Pill>
         <Pill>
-          <PenNib size={24} /> Designer
+          <PenNib size={20} /> Designer
         </Pill>
         <Pill>
-          <PencilLine size={24} /> Writer
+          <PencilLine size={20} /> Writer
         </Pill>
         <DownArrow />
       </Hero>

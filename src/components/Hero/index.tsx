@@ -10,11 +10,11 @@ type HeroProps = {
 
 export const Hero: React.FC<HeroProps> = ({ title, tagline, children }) => {
   return (
-    <section className="relative flex items-center justify-center px-16 pt-36 pb-20 gap-20">
-      <div className="flex flex-col gap-4">
+    <section className="relative flex flex-col md:flex-row items-center justify-center px-16 pt-36 pb-20 gap-20">
+      <div className="flex flex-col gap-4 items-center md:items-start text-center md:text-start">
         <Heading as="h1">{title}</Heading>
-        <p className="text-secondary-color text-3xl">{tagline}</p>
-        <div className="flex gap-3">{children}</div>
+        <p className="text-secondary-color text-xl lg:text-3xl">{tagline}</p>
+        <div className="hidden md:flex md:flex-row gap-3">{children}</div>
       </div>
       <ProfilePic />
     </section>
