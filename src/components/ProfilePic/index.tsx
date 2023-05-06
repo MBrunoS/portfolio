@@ -8,7 +8,7 @@ export const ProfilePic: React.FC = () => {
       src={profileImg}
       alt="Maurício Bruno"
       placeholder="blur"
-      className={`animate-glow max-w-[200px] md:max-w-[400px] border-8 border-primary-color rounded-full`}
+      className={`animate-glow max-w-[200px] md:max-w-[400px] border-4 lg:border-8 border-primary-color rounded-full`}
     />
   );
 };

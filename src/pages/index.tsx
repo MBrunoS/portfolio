@@ -12,6 +12,7 @@ import webDevAnimation from "../assets/web_dev.json";
 import { Hero } from "../components/Hero";
 import { Pill } from "../components/Pill";
 import { Code, PenNib, PencilLine } from "@phosphor-icons/react";
+import { SocialLinks } from "../components/SocialLinks";
 
 export default function Home() {
   const webDevAnimRef = useRef<LottieRefCurrentProps>(null);
@@ -22,26 +23,17 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Maurício Bruno - Desenvolvedor Front-end</title>
+        <title>Maurício Bruno - Desenvolvedor Full-Stack</title>
         <meta
           name="description"
-          content="Maurício Bruno - Desenvolvedor Front-end"
+          content="Maurício Bruno - Desenvolvedor Full-Stack"
         />
       </Head>
 
       <Navbar />
 
-      <Hero title="Maurício Bruno" tagline="Full-Stack Developer">
-        <Pill>
-          <Code size={20} /> Developer
-        </Pill>
-        <Pill>
-          <PenNib size={20} /> Designer
-        </Pill>
-        <Pill>
-          <PencilLine size={20} /> Writer
-        </Pill>
-        <DownArrow />
+      <Hero title="Maurício Bruno" tagline="Desenvolvedor Full-Stack">
+        <SocialLinks />
       </Hero>
 
       <Section id="about" variant="featured">

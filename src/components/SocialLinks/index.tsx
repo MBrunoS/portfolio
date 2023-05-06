@@ -1,13 +1,15 @@
 import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
+import { Pill } from "../Pill";
+import { GithubLogo, LinkedinLogo } from "@phosphor-icons/react";
 
 export const SocialLinks: React.FC = () => {
   const links = [
-    { url: "https://github.com/MBrunoS", Icon: FaGithub },
+    { url: "https://github.com/mbrunos", name: "Github", Icon: GithubLogo },
     {
-      url: "https://www.linkedin.com/in/mauricio-bruno-da-silva",
-      Icon: FaLinkedin,
+      url: "https://www.linkedin.com/in/mbrunos",
+      name: "Linkedin",
+      Icon: LinkedinLogo,
     },
   ];
 
@@ -15,7 +17,9 @@ export const SocialLinks: React.FC = () => {
     <div className="flex justify-center gap-5">
       {links.map((link, i) => (
         <Link href={link.url} target="_blank" key={i}>
-          <link.Icon className="text-4xl text-disabled-color hover:text-secondary-color transition-colors" />
+          <Pill>
+            <link.Icon size={20} /> {link.name}
+          </Pill>
         </Link>
       ))}
     </div>
