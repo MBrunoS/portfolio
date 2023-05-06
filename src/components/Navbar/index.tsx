@@ -29,7 +29,7 @@ export const Navbar: React.FC = () => {
       <NavigationMenu.List>
         <NavigationMenu.Item>
           <NavigationMenu.Link
-            href="/"
+            href="#/"
             className="text-primary-color text-xl font-black"
             id="home"
           >
