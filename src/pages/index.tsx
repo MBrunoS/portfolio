@@ -2,8 +2,6 @@ import Head from "next/head";
 import Lottie, { LottieRefCurrentProps } from "lottie-react";
 import { useRef } from "react";
 import { Navbar } from "../components/Navbar";
-import { SocialLinks } from "../components/SocialLinks";
-import { ProfilePic } from "../components/ProfilePic";
 import { DownArrow } from "../components/DownArrow";
 import { Heading } from "../components/Heading";
 import { Projects } from "../components/Projects";

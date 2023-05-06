@@ -1,22 +1,49 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 
 export const Navbar: React.FC = () => {
+  const [isScrolling, setIsScrolling] = useState(false);
+
+  function scrollHandler() {
+    if (window.scrollY > 50) {
+      setIsScrolling(true);
+    } else {
+      setIsScrolling(false);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", scrollHandler);
+
+    return () => {
+      window.removeEventListener("scroll", scrollHandler);
+    };
+  }, []);
+
   return (
-    <NavigationMenu.Root className="fixed bg-zinc-900/70 w-full p-4 z-10 backdrop-blur-md flex items-center justify-between">
+    <NavigationMenu.Root
+      className={`fixed w-full px-20 py-10 z-10 flex items-center justify-between transition ${
+        isScrolling && "bg-zinc-900/70 backdrop-blur-md"
+      }`}
+    >
       <NavigationMenu.List>
         <NavigationMenu.Item>
           <NavigationMenu.Link
             href="/"
-            className="text-primary-color text-4xl font-black"
+            className="text-primary-color text-xl font-black"
             id="home"
           >
-            MB
+            MBrunoS
           </NavigationMenu.Link>
         </NavigationMenu.Item>
       </NavigationMenu.List>
 
-      <NavigationMenu.List className="flex gap-4">
+      <NavigationMenu.List
+        className={`flex gap-4 px-4 py-2 transition-border ${
+          !isScrolling &&
+          "rounded-full border border-primary-color bg-zinc-900/70 shadow-md shadow-gray-50/20"
+        }`}
+      >
         <NavigationMenu.Item>
           <NavigationMenu.Link
             href="#about"
