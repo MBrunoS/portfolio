@@ -10,9 +10,8 @@ import { CoverCard } from "../components/Card/Cover";
 import { Jobs } from "../components/Jobs";
 import webDevAnimation from "../assets/web_dev.json";
 import { Hero } from "../components/Hero";
-import { Pill } from "../components/Pill";
-import { Code, PenNib, PencilLine } from "@phosphor-icons/react";
 import { SocialLinks } from "../components/SocialLinks";
+import CTA from "../components/CTA";
 
 export default function Home() {
   const webDevAnimRef = useRef<LottieRefCurrentProps>(null);
@@ -96,8 +95,9 @@ export default function Home() {
         </div>
       </Section>
 
-      <footer className="bg-card-gradient py-4 border-t border-solid border-highlight-color text-secondary-color text-center sm:px-6 md:px-20 backdrop-blur-xl">
-        Maurício Bruno &copy; {year}
+      <footer className="bg-card-gradient pt-10 border-t border-solid border-highlight-color text-secondary-color text-center sm:px-6 md:px-20 backdrop-blur-xl">
+        <CTA headline="Vamos trabalhar juntos?" text="Envie uma mensagem" />
+        <p className="py-8">Maurício Bruno &copy; {year}</p>
       </footer>
     </>
   );

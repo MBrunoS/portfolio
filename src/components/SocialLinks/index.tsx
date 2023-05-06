@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { Pill } from "../Pill";
 import { GithubLogo, LinkedinLogo } from "@phosphor-icons/react";
+import { Button } from "../Button";
 
 export const SocialLinks: React.FC = () => {
   const links = [
@@ -17,9 +17,7 @@ export const SocialLinks: React.FC = () => {
     <div className="flex justify-center gap-5">
       {links.map((link, i) => (
         <Link href={link.url} target="_blank" key={i}>
-          <Pill>
-            <link.Icon size={20} /> {link.name}
-          </Pill>
+          <Button icon={<link.Icon size={20} />}>{link.name}</Button>
         </Link>
       ))}
     </div>
