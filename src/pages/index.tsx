@@ -11,6 +11,9 @@ import { Section } from "../components/Section";
 import { CoverCard } from "../components/Card/Cover";
 import { Jobs } from "../components/Jobs";
 import webDevAnimation from "../assets/web_dev.json";
+import { Hero } from "../components/Hero";
+import { Pill } from "../components/Pill";
+import { Code, PenNib, PencilLine } from "@phosphor-icons/react";
 
 export default function Home() {
   const webDevAnimRef = useRef<LottieRefCurrentProps>(null);
@@ -30,18 +33,18 @@ export default function Home() {
 
       <Navbar />
 
-      <Section id="home" variant="hero">
-        <ProfilePic />
-        <div className="mt-10 mb-4 text-center">
-          <Heading>Maurício Bruno</Heading>
-          <p className="text-secondary-color uppercase text-lg">
-            Desenvolvedor Front-end
-          </p>
-        </div>
-        <SocialLinks />
-
+      <Hero title="Maurício Bruno" tagline="Full-Stack Developer">
+        <Pill>
+          <Code size={24} /> Developer
+        </Pill>
+        <Pill>
+          <PenNib size={24} /> Designer
+        </Pill>
+        <Pill>
+          <PencilLine size={24} /> Writer
+        </Pill>
         <DownArrow />
-      </Section>
+      </Hero>
 
       <Section id="about" variant="featured">
         <Heading as="h2">Quem sou eu</Heading>
