@@ -85,14 +85,23 @@ export default function Home() {
       <Section id="articles">
         <Heading as="h2">Artigos</Heading>
 
-        <div className="flex flex-col md:flex-row gap-4 items-center justify-around mt-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 sm:px-12 lg:px-20 mt-16 justify-center">
           <CoverCard
-            imgUrl="https://community.revelo.com/content/images/size/w600/2022/11/BLOG-BR---Criando-um-plugin-no-WordPress-com-React.png"
+            imgUrl="https://community.revelo.com.br/content/images/size/w2000/2022/11/BLOG-BR---Criando-um-plugin-no-WordPress-com-React.png"
             title="Criando um plugin no WordPress com React"
             link="https://community.revelo.com/como-criar-um-plugin-wordpress-com-react/"
           >
             Este artigo mostra que criar seus primeiros plugins e blocos do
             WordPress é relativamente fácil.
+          </CoverCard>
+
+          <CoverCard
+            imgUrl="https://community.revelo.com.br/content/images/size/w2000/2023/05/-----BLOG-COMMUNITY-BR---Princi-pios-de-Design-para-devs-Frontend.png"
+            title="Princípios de Design para devs Frontend"
+            link="https://community.revelo.com.br/principios-de-design-para-devs-frontend/"
+          >
+            Princípios básicos de design para ajudar desenvolvedores frontend a
+            criar interfaces mais bonitas e funcionais.
           </CoverCard>
         </div>
       </Section>
