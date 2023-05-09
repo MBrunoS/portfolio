@@ -68,13 +68,15 @@ export default function Home() {
 
       <Section id="jobs">
         <Heading as="h2">Trabalhos</Heading>
-        <p className="text-secondary-color mt-2">Meus últimos trabalhos</p>
+        <p className="text-secondary-color text-lg mt-2 mb-12">
+          Alguns dos meus últimos trabalhos
+        </p>
         <Jobs />
       </Section>
 
-      <Section id="projects" variant="featured">
+      <Section id="projects">
         <Heading as="h2">Projetos</Heading>
-        <p className="text-secondary-color mt-2">
+        <p className="text-secondary-color text-lg mt-2">
           Projetos desenvolvidos para aprimorar minhas habilidades
         </p>
         <Projects />

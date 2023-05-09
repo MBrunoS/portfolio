@@ -29,12 +29,13 @@ export const Jobs: React.FC = () => {
   ];
 
   return (
-    <div className="flex flex-col md:flex-row gap-4 items-center justify-around mt-8">
+    <div className="grid md:grid-cols-2 gap-4 md:gap-10 lg:gap-20 place-items-center mt-8 sm:px-8 md:px-0">
       {jobList.map((job, i) => (
         <CoverCard
           title={job.title}
           link={job.link}
           imgUrl={job.imgUrl}
+          className="md:even:translate-y-28"
           key={i}
         >
           {job.description}
