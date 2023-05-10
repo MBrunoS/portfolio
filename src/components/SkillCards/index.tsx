@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 
 export const SkillCards: React.FC = () => {
@@ -21,7 +20,7 @@ export const SkillCards: React.FC = () => {
           className="bg-primary-color/25 rounded-lg p-2 py-4 flex flex-col items-center justify-center"
           key={skill.title}
         >
-          <Image
+          <img
             src={`/assets/icons/${skill.icon}.svg`}
             alt={skill.title}
             className="w-10 h-10 md:w-20 md:h-20 mb-2"

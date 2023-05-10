@@ -1,7 +1,7 @@
+import { ArrowSquareOut } from "@phosphor-icons/react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import React from "react";
-import { FiExternalLink } from "react-icons/fi";
 
 interface CoverCardProps {
   children: React.ReactNode;
@@ -37,7 +37,7 @@ export const CoverCard: React.FC<CoverCardProps> = ({
             target="_blank"
           >
             {title}
-            <FiExternalLink />
+            <ArrowSquareOut size={24} />
           </Link>
         </div>
         <p className="text-secondary-color text-base">{children}</p>
