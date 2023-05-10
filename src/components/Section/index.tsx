@@ -37,7 +37,7 @@ export const Section: React.FC<SectionProps> = ({
   return (
     <section
       id={id}
-      className="text-center py-16 px-4 sm:px-6 md:px-20 max-w-[1400px] mx-auto"
+      className="text-center pt-16 px-4 sm:px-6 md:px-20 max-w-[1400px] mx-auto"
     >
       <Fade triggerOnce fraction={0.25} duration={500} cascade>
         {children}

@@ -20,7 +20,7 @@ export const CoverCard: React.FC<CoverCardProps> = ({
 }) => {
   return (
     <div
-      className={`w-full  bg-card-gradient border border-solid border-highlight-color rounded-2xl border-1 overflow-hidden ${className}`}
+      className={`w-full bg-card-gradient border border-solid border-highlight-color rounded-2xl border-1 overflow-hidden ${className}`}
     >
       <Image
         src={imgUrl}

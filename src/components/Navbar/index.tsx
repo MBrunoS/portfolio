@@ -22,8 +22,8 @@ export const Navbar: React.FC = () => {
 
   return (
     <NavigationMenu.Root
-      className={`fixed w-full p-4 md:px-20 md:py-10 z-10 flex flex-col md:flex-row gap-2 items-center justify-between transition ${
-        isScrolling && "bg-zinc-900/70 backdrop-blur-md"
+      className={`fixed w-full p-4 md:px-20 md:py-10 z-10 flex flex-col md:flex-row gap-2 items-center justify-between transition-all ${
+        isScrolling && "py-2 gap-y-1 md:py-5 bg-zinc-900/60 backdrop-blur-md"
       }`}
     >
       <NavigationMenu.List>
@@ -39,9 +39,9 @@ export const Navbar: React.FC = () => {
       </NavigationMenu.List>
 
       <NavigationMenu.List
-        className={`flex gap-4 px-4 py-2 transition-border ${
+        className={`flex gap-4 px-4 transition-border ${
           !isScrolling &&
-          "rounded-full border border-primary-color bg-zinc-900/70 shadow-md shadow-gray-50/20"
+          "py-2 rounded-full border border-primary-color bg-zinc-900/60 shadow-md shadow-gray-50/20"
         }`}
       >
         <NavigationMenu.Item>

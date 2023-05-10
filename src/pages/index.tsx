@@ -40,10 +40,10 @@ export default function Home() {
               visão estética para desenvolver soluções inovadoras.
             </p>
             <p>
-              Valorizo a colaboração e o trabalho em equipe, além de
-              compartilhar conhecimentos com outros desenvolvedores. Meu
-              objetivo é desenvolver soluções modernas e escaláveis que superem
-              as expectativas dos clientes.
+              Meu objetivo é desenvolver soluções modernas e escaláveis que
+              superem as expectativas. Valorizo a colaboração e o trabalho em
+              equipe, além de compartilhar conhecimentos com outros
+              desenvolvedores.
             </p>
           </div>
 
@@ -91,7 +91,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <footer className="bg-card-gradient pt-10 border-t border-solid border-highlight-color text-secondary-color text-center sm:px-6 md:px-20 backdrop-blur-xl">
+      <footer className="bg-card-gradient pt-10 mt-16 border-t border-solid border-highlight-color text-secondary-color text-center sm:px-6 md:px-20 backdrop-blur-xl">
         <CTA headline="Vamos trabalhar juntos?" text="Envie uma mensagem" />
         <p className="py-8">Maurício Bruno &copy; {year}</p>
       </footer>

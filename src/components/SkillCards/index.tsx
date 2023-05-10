@@ -14,14 +14,14 @@ export const SkillCards: React.FC = () => {
   ];
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-4 md:gap-6 lg:gap-8 lg:pl-8">
+    <div className="grid grid-cols-3 md:grid-cols-3 gap-2 sm:gap-4 md:gap-6 lg:gap-8 lg:pl-8">
       {skills.map((skill) => (
         <div
-          className="bg-primary-color/25 rounded-lg p-2 py-4 flex flex-col items-center justify-center last:col-span-2 md:last:col-span-1"
+          className="bg-primary-color/25 rounded-lg p-2 py-4 flex flex-col items-center justify-center"
           key={skill.title}
         >
           <img
-            src={`/icons/${skill.icon}.svg`}
+            src={`/assets/icons/${skill.icon}.svg`}
             alt={skill.title}
             className="w-10 h-10 md:w-20 md:h-20 mb-2"
           />
