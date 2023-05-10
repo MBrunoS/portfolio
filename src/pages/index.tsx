@@ -1,22 +1,16 @@
 import Head from "next/head";
-import Lottie, { LottieRefCurrentProps } from "lottie-react";
-import { useRef } from "react";
 import { Navbar } from "../components/Navbar";
-import { DownArrow } from "../components/DownArrow";
 import { Heading } from "../components/Heading";
 import { Projects } from "../components/Projects";
 import { Section } from "../components/Section";
 import { CoverCard } from "../components/Card/Cover";
 import { Jobs } from "../components/Jobs";
-import webDevAnimation from "../assets/web_dev.json";
 import { Hero } from "../components/Hero";
 import { SocialLinks } from "../components/SocialLinks";
 import CTA from "../components/CTA";
+import { SkillCards } from "../components/SkillCards";
 
 export default function Home() {
-  const webDevAnimRef = useRef<LottieRefCurrentProps>(null);
-  webDevAnimRef.current?.setSpeed(0.75);
-
   const year = new Date().getFullYear();
 
   return (
@@ -36,33 +30,24 @@ export default function Home() {
       </Hero>
 
       <Section id="about" variant="featured">
-        <Heading as="h2">Quem sou eu</Heading>
-        <div className="flex flex-col lg:flex-row basis-1/2 gap-4 md:gap-12 lg:gap-36 items-center justify-around mt-8 lg:mt-2">
+        <div className="grid lg:grid-cols-2 gap-y-8 items-center">
           <div className="text-left text-secondary-color md:text-lg">
-            <p>
-              Entusiasta do universo front-end desde 2013 e fascinado por tudo
-              que é possível criar com essas tecnologias.
-              <br />
-              <br />
-              Procuro sempre estar atualizado às tecnologias e conceitos mais
-              modernos para poder entregar uma experiência incrível em cada
-              projeto.
-              <br />
-              <br />
-              Algumas das tecnologias que tenho experiência:
+            <Heading as="h2">Sobre Mim</Heading>
+            <p className="mt-8 mb-4">
+              Sou um desenvolvedor de software full-stack apaixonado por criar
+              experiências digitais envolventes. Com uma sólida experiência em
+              front-end e design gráfico, combino habilidades técnicas com uma
+              visão estética para desenvolver soluções inovadoras.
             </p>
-
-            <ul className="grid grid-cols-2 lg:grid-cols-3 list-disc marker:text-primary-color mt-6">
-              <li className="ml-6">Javascript (ES6+)</li>
-              <li className="ml-6">Typescript</li>
-              <li className="ml-6">React</li>
-              <li className="ml-6">Next.js</li>
-              <li className="ml-6">Node.js</li>
-              <li className="ml-6">WordPress</li>
-            </ul>
+            <p>
+              Valorizo a colaboração e o trabalho em equipe, além de
+              compartilhar conhecimentos com outros desenvolvedores. Meu
+              objetivo é desenvolver soluções modernas e escaláveis que superem
+              as expectativas dos clientes.
+            </p>
           </div>
 
-          <Lottie animationData={webDevAnimation} lottieRef={webDevAnimRef} />
+          <SkillCards />
         </div>
       </Section>
 

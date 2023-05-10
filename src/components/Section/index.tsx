@@ -25,9 +25,9 @@ export const Section: React.FC<SectionProps> = ({
     return (
       <section
         id={id}
-        className="text-center py-16 px-4 sm:px-6 md:px-20 bg-card-gradient border-y border-solid border-highlight-color backdrop-blur-xl"
+        className="py-16 px-4 sm:px-6 md:px-20 bg-card-gradient border-y border-solid border-highlight-color"
       >
-        <Fade triggerOnce fraction={0.25} duration={500} cascade>
+        <Fade triggerOnce fraction={0.15} duration={300} cascade>
           {children}
         </Fade>
       </section>
@@ -35,7 +35,10 @@ export const Section: React.FC<SectionProps> = ({
   }
 
   return (
-    <section id={id} className="text-center py-16 px-4 sm:px-6 md:px-20">
+    <section
+      id={id}
+      className="text-center py-16 px-4 sm:px-6 md:px-20 max-w-[1400px] mx-auto"
+    >
       <Fade triggerOnce fraction={0.25} duration={500} cascade>
         {children}
       </Fade>
