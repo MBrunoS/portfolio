@@ -1,0 +1,64 @@
+{
+  "head": {
+    "title": "Maurício Bruno - Full-Stack Developer"
+  },
+  "navbar": {
+    "about": "About",
+    "jobs": "Jobs",
+    "projects": "Projects",
+    "articles": "Articles"
+  },
+  "hero": {
+    "tagline": "Full-Stack Developer"
+  },
+  "about": {
+    "title": "About Me",
+    "firstParagraph": "I'm a full-stack software developer with a passion for creating engaging digital experiences. With a solid background in front-end and graphic design, I combine technical skills with an aesthetic vision to develop innovative solutions.",
+    "secondParagraph": "My goal is to develop modern and scalable solutions that exceed expectations. I value collaboration and teamwork, as well as sharing knowledge with other developers."
+  },
+  "jobs": {
+    "title": "Jobs",
+    "subtitle": "Some of my lastest works",
+    "ia": {
+      "title": "Inglês Aplicado",
+      "description": "Redesign of the entire website"
+    },
+    "sorriso": {
+      "title": "Clinic Sorriso & Cia",
+      "description": "Creation of landing page and plugin for scheduling appointments"
+    },
+    "wood": {
+      "title": "Wood Express",
+      "description": "Website and e-commerce platform for selling custom furniture"
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Projects designed to improve my skills",
+    "demo": "Demo",
+    "code": "Code",
+    "repowars": {
+      "title": "RepoWars",
+      "description": "GitHub repository battle game"
+    },
+    "devconnect": {
+      "title": "DevConnect",
+      "description": "Social networking platform for devs to connect"
+    }
+  },
+  "articles": {
+    "title": "Articles",
+    "wp-plugins": {
+      "title": "Creating a plugin in WordPress with React (pt-BR)",
+      "description": "This article shows that creating your first WordPress plugins and blocks is relatively easy."
+    },
+    "design-principles": {
+      "title": "Design Principles for Frontend Devs (pt-BR)",
+      "description": "Basic design principles to help frontend developers create more beautiful and functional interfaces."
+    }
+  },
+  "footer": {
+    "headline": "Let's work together?",
+    "button": "Send a message"
+  }
+}

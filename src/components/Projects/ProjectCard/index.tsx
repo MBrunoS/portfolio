@@ -2,6 +2,8 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Button } from "../../Button";
+import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 
 interface ProjectCardProps {
   title: string;
@@ -18,6 +20,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   badges,
   description,
 }) => {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col gap-6 w-full lg:w-5/6">
       <div
@@ -53,12 +56,12 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           <div className="flex justify-center md:justify-start items-center gap-4">
             {links.demo && (
               <Link href={links.demo} target="_blank">
-                <Button>Demo</Button>
+                <Button>{t("projects.demo")}</Button>
               </Link>
             )}
             {links.code && (
               <Link href={links.code} target="_blank">
-                <Button variant="secondary">Código</Button>
+                <Button variant="secondary">{t("projects.code")}</Button>
               </Link>
             )}
           </div>

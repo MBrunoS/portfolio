@@ -1,0 +1,64 @@
+{
+  "head": {
+    "title": "Maurício Bruno - Desenvolvedor Full-Stack"
+  },
+  "navbar": {
+    "about": "Sobre",
+    "jobs": "Trabalhos",
+    "projects": "Projetos",
+    "articles": "Artigos"
+  },
+  "hero": {
+    "tagline": "Desenvolvedor Full-Stack"
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "firstParagraph": "Sou um desenvolvedor de software full-stack apaixonado por criar experiências digitais envolventes. Com uma sólida experiência em front-end e design gráfico, combino habilidades técnicas com uma visão estética para desenvolver soluções inovadoras.",
+    "secondParagraph": "Meu objetivo é desenvolver soluções modernas e escaláveis que superem as expectativas. Valorizo a colaboração e o trabalho em equipe, além de compartilhar conhecimentos com outros desenvolvedores."
+  },
+  "jobs": {
+    "title": "Trabalhos",
+    "subtitle": "Alguns dos meus últimos trabalhos",
+    "ia": {
+      "title": "Inglês Aplicado",
+      "description": "Reformulação de todo o site"
+    },
+    "sorriso": {
+      "title": "Clínica Sorriso & Cia",
+      "description": "Criação de landing page e plugin para agendamento das consultas"
+    },
+    "wood": {
+      "title": "Wood Express",
+      "description": "Site e plataforma de e-commerce para venda de móveis sob medida"
+    }
+  },
+  "projects": {
+    "title": "Projetos",
+    "subtitle": "Projetos desenvolvidos para aprimorar minhas habilidades",
+    "demo": "Demo",
+    "code": "Código",
+    "repowars": {
+      "title": "RepoWars",
+      "description": "Jogo de batalha de repositórios do GitHub"
+    },
+    "devconnect": {
+      "title": "DevConnect",
+      "description": "Plataforma de rede social para devs poderem se conectar"
+    }
+  },
+  "articles": {
+    "title": "Artigos",
+    "wp-plugins": {
+      "title": "Criando um plugin no WordPress com React",
+      "description": "Este artigo mostra que criar seus primeiros plugins e blocos do WordPress é relativamente fácil."
+    },
+    "design-principles": {
+      "title": "Princípios de Design para devs Frontend",
+      "description": "Princípios básicos de design para ajudar desenvolvedores frontend a criar interfaces mais bonitas e funcionais."
+    }
+  },
+  "footer": {
+    "headline": "Vamos trabalhar juntos?",
+    "button": "Envie uma mensagem"
+  }
+}

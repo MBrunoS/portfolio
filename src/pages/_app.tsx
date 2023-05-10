@@ -1,11 +1,13 @@
 import type { AppProps } from "next/app";
 import { Rubik, Public_Sans } from "next/font/google";
+import { appWithI18Next } from "ni18n";
+import { ni18nConfig } from "../../ni18n.config";
 import "../styles/globals.css";
 
 const rubik = Rubik({ subsets: ["latin"], weight: ["400", "700"] });
 const publicSans = Public_Sans({ subsets: ["latin"], weight: ["400", "700"] });
 
-export default function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <style jsx global>{`
@@ -26,3 +28,5 @@ export default function App({ Component, pageProps }: AppProps) {
     </>
   );
 }
+
+export default appWithI18Next(App, ni18nConfig);

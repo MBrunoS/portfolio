@@ -3,26 +3,26 @@ import { CoverCard } from "../Card/Cover";
 import ia from "../../assets/ia.webp";
 import sorriso from "../../assets/sorriso.webp";
 import wood from "../../assets/wood.webp";
+import { useTranslation } from "react-i18next";
 
 export const Jobs: React.FC = () => {
+  const { t } = useTranslation();
   const jobList = [
     {
-      title: "Inglês Aplicado",
-      description: "Reformulação de todo o site",
+      title: t("jobs.ia.title"),
+      description: t("jobs.ia.description"),
       link: "https://inglesaplicado.com.br/v2",
       imgUrl: ia,
     },
     {
-      title: "Clínica Sorriso & Cia",
-      description:
-        "Criação de landing page e plugin para agendamento das consultas",
+      title: t("jobs.sorriso.title"),
+      description: t("jobs.sorriso.description"),
       link: "https://clinicasorrisoecia.com.br/",
       imgUrl: sorriso,
     },
     {
-      title: "Wood Express",
-      description:
-        "Site e plataforma de e-commerce para venda de móveis sob medida",
+      title: t("jobs.wood.title"),
+      description: t("jobs.wood.description"),
       link: "https://woodexpress.ind.br/",
       imgUrl: wood,
     },

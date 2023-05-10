@@ -2,12 +2,14 @@ import React from "react";
 import devconnect from "../../assets/devconnect.webp";
 import repowars from "../../assets/repowars.webp";
 import { ProjectCard } from "./ProjectCard";
+import { useTranslation } from "react-i18next";
 
 export const Projects: React.FC = () => {
+  const { t } = useTranslation();
   const projects = [
     {
-      title: "RepoWars",
-      description: "Jogo de batalha de repositórios do GitHub",
+      title: t("projects.repowars.title"),
+      description: t("projects.repowars.description"),
       imgSrc: repowars,
       links: {
         demo: "https://repowars.mbrunos.dev/",
@@ -16,8 +18,8 @@ export const Projects: React.FC = () => {
       badges: ["React", "Typescript", "Vite", "React Icons"],
     },
     {
-      title: "DevConnect",
-      description: "Plataforma de rede social para devs poderem se conectar",
+      title: t("projects.devconnect.title"),
+      description: t("projects.devconnect.description"),
       imgSrc: devconnect,
       links: {
         demo: "https://devconnect.mbrunos.dev/",

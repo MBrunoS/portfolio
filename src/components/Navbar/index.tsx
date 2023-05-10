@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
+import { useTranslation } from "react-i18next";
 
 export const Navbar: React.FC = () => {
   const [isScrolling, setIsScrolling] = useState(false);
+  const { t } = useTranslation();
 
   function scrollHandler() {
     if (window.scrollY > 50) {
@@ -49,7 +51,7 @@ export const Navbar: React.FC = () => {
             href="#about"
             className="text-secondary-color hover:text-primary-color"
           >
-            Sobre
+            {t("navbar.about")}
           </NavigationMenu.Link>
         </NavigationMenu.Item>
 
@@ -58,7 +60,7 @@ export const Navbar: React.FC = () => {
             href="#jobs"
             className="text-secondary-color hover:text-primary-color"
           >
-            Trabalhos
+            {t("navbar.jobs")}
           </NavigationMenu.Link>
         </NavigationMenu.Item>
 
@@ -67,7 +69,7 @@ export const Navbar: React.FC = () => {
             href="#projects"
             className="text-secondary-color hover:text-primary-color"
           >
-            Projetos
+            {t("navbar.projects")}
           </NavigationMenu.Link>
         </NavigationMenu.Item>
 
@@ -76,7 +78,7 @@ export const Navbar: React.FC = () => {
             href="#articles"
             className="text-secondary-color hover:text-primary-color"
           >
-            Artigos
+            {t("navbar.articles")}
           </NavigationMenu.Link>
         </NavigationMenu.Item>
       </NavigationMenu.List>
