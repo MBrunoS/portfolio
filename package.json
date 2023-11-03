@@ -13,7 +13,7 @@
     "@phosphor-icons/react": "^2.0.9",
     "@radix-ui/react-navigation-menu": "^1.1.1",
     "i18next": "^22.4.15",
-    "next": "^13.4.1",
+    "next": "^14.0.1",
     "ni18n": "^1.1.0",
     "react": "18.2.0",
     "react-awesome-reveal": "^4.1.0",
