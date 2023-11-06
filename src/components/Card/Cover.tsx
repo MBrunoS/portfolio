@@ -1,4 +1,4 @@
-import { ArrowSquareOut } from "@phosphor-icons/react";
+import { ArrowSquareOut } from "@phosphor-icons/react/dist/ssr";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -30,17 +30,17 @@ export const CoverCard: React.FC<CoverCardProps> = ({
       />
 
       <div className="px-6 py-10">
-        <div className="font-bold text-xl mb-4 text-primary-color">
+        <div className="mb-4 text-xl font-bold text-primary-color">
           <Link
             href={link}
-            className="hover:underline inline-flex gap-2 items-center"
+            className="inline-flex items-center gap-2 hover:underline"
             target="_blank"
           >
             {title}
             <ArrowSquareOut size={24} />
           </Link>
         </div>
-        <p className="text-secondary-color text-base">{children}</p>
+        <p className="text-base text-secondary-color">{children}</p>
       </div>
     </div>
   );
