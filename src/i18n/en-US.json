@@ -48,11 +48,11 @@
   },
   "articles": {
     "title": "Articles",
-    "wp-plugins": {
+    "wpPlugins": {
       "title": "Creating a plugin in WordPress with React (pt-BR)",
       "description": "This article shows that creating your first WordPress plugins and blocks is relatively easy."
     },
-    "design-principles": {
+    "designPrinciples": {
       "title": "Design Principles for Frontend Devs (pt-BR)",
       "description": "Basic design principles to help frontend developers create more beautiful and functional interfaces."
     }
