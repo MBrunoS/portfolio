@@ -1,36 +1,23 @@
 import React from "react";
-import devconnect from "../../assets/devconnect.webp";
-import repowars from "../../assets/repowars.webp";
 import { ProjectCard } from "./ProjectCard";
-import { useTranslation } from "react-i18next";
+import { StaticImageData } from "next/image";
 
-export const Projects: React.FC = () => {
-  const { t } = useTranslation();
-  const projects = [
-    {
-      title: t("projects.repowars.title"),
-      description: t("projects.repowars.description"),
-      imgSrc: repowars,
-      links: {
-        demo: "https://repowars.mbrunos.dev/",
-        code: "https://github.com/MBrunoS/repowars",
-      },
-      badges: ["React", "Typescript", "Vite", "React Icons"],
-    },
-    {
-      title: t("projects.devconnect.title"),
-      description: t("projects.devconnect.description"),
-      imgSrc: devconnect,
-      links: {
-        demo: "https://devconnect.mbrunos.dev/",
-        code: "https://github.com/MBrunoS/devconnect",
-      },
-      badges: ["Next.js", "Typescript", "Prisma", "Markdoc"],
-    },
-  ];
+type ProjectsProps = {
+  projects: {
+    title: string;
+    description: string;
+    imgSrc: StaticImageData;
+    links: {
+      demo: { label: string; value: string };
+      code: { label: string; value: string };
+    };
+    badges: string[];
+  }[];
+};
 
+export const Projects: React.FC<ProjectsProps> = ({ projects }) => {
   return (
-    <div className="flex flex-col gap-4 items-center justify-around mt-16">
+    <div className="flex flex-col items-center justify-around gap-4 mt-16">
       {projects.map((project, i) => (
         <ProjectCard
           title={project.title}

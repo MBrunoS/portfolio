@@ -1,10 +1,16 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
-import { useTranslation } from "react-i18next";
 
-export const Navbar: React.FC = () => {
+type NavbarProps = {
+  links: {
+    name: string;
+    href: string;
+  }[];
+};
+
+export const Navbar: React.FC<NavbarProps> = ({ links }) => {
   const [isScrolling, setIsScrolling] = useState(false);
-  const { t } = useTranslation();
 
   function scrollHandler() {
     if (window.scrollY > 50) {
@@ -32,7 +38,7 @@ export const Navbar: React.FC = () => {
         <NavigationMenu.Item>
           <NavigationMenu.Link
             href="#/"
-            className="text-primary-color text-xl font-black"
+            className="text-xl font-black text-primary-color"
             id="home"
           >
             MBrunoS
@@ -46,41 +52,16 @@ export const Navbar: React.FC = () => {
           "py-2 rounded-full border border-primary-color bg-zinc-900/60 shadow-md shadow-gray-50/20"
         }`}
       >
-        <NavigationMenu.Item>
-          <NavigationMenu.Link
-            href="#about"
-            className="text-secondary-color hover:text-primary-color"
-          >
-            {t("navbar.about")}
-          </NavigationMenu.Link>
-        </NavigationMenu.Item>
-
-        <NavigationMenu.Item>
-          <NavigationMenu.Link
-            href="#jobs"
-            className="text-secondary-color hover:text-primary-color"
-          >
-            {t("navbar.jobs")}
-          </NavigationMenu.Link>
-        </NavigationMenu.Item>
-
-        <NavigationMenu.Item>
-          <NavigationMenu.Link
-            href="#projects"
-            className="text-secondary-color hover:text-primary-color"
-          >
-            {t("navbar.projects")}
-          </NavigationMenu.Link>
-        </NavigationMenu.Item>
-
-        <NavigationMenu.Item>
-          <NavigationMenu.Link
-            href="#articles"
-            className="text-secondary-color hover:text-primary-color"
-          >
-            {t("navbar.articles")}
-          </NavigationMenu.Link>
-        </NavigationMenu.Item>
+        {links.map((link) => (
+          <NavigationMenu.Item key={link.name}>
+            <NavigationMenu.Link
+              href={link.href}
+              className="text-secondary-color hover:text-primary-color"
+            >
+              {link.name}
+            </NavigationMenu.Link>
+          </NavigationMenu.Item>
+        ))}
       </NavigationMenu.List>
     </NavigationMenu.Root>
   );
