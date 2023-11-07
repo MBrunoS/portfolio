@@ -60,7 +60,7 @@ export default async function Home({ params }: Params) {
           {t.jobs.subtitle}
         </p>
         <Jobs
-          jobList={[
+          list={[
             {
               title: t.jobs.ia.title,
               description: t.jobs.ia.description,
@@ -89,40 +89,32 @@ export default async function Home({ params }: Params) {
           {t.projects.subtitle}
         </p>
         <Projects
-          projects={[
+          list={[
             {
               title: t.projects.repowars.title,
               description: t.projects.repowars.description,
               imgSrc: repowars,
               links: {
-                demo: {
-                  value: "https://repowars.mbrunos.dev/",
-                  label: t.projects.demo,
-                },
-                code: {
-                  value: "https://github.com/MBrunoS/repowars",
-                  label: t.projects.code,
-                },
+                demo: "https://repowars.mbrunos.dev/",
+                code: "https://github.com/MBrunoS/repowars",
               },
-              badges: ["React", "Typescript", "Vite", "React Icons"],
+              badges: ["React", "Typescript", "GraphQL", "Vite", "React Icons"],
             },
             {
               title: t.projects.devconnect.title,
               description: t.projects.devconnect.description,
               imgSrc: devconnect,
               links: {
-                demo: {
-                  value: "https://devconnect.mbrunos.dev/",
-                  label: t.projects.demo,
-                },
-                code: {
-                  value: "https://github.com/MBrunoS/devconnect",
-                  label: t.projects.code,
-                },
+                demo: "https://devconnect.mbrunos.dev/",
+                code: "https://github.com/MBrunoS/devconnect",
               },
               badges: ["Next.js", "Typescript", "Prisma", "Markdoc"],
             },
           ]}
+          labels={{
+            demo: t.projects.demo,
+            code: t.projects.code,
+          }}
         />
       </Section>
 

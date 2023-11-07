@@ -7,11 +7,15 @@ interface ProjectCardProps {
   title: string;
   imgSrc: StaticImageData;
   links: {
-    demo?: { label: string; value: string };
-    code?: { label: string; value: string };
+    demo?: string;
+    code: string;
   };
   badges: string[];
   description: string;
+  labels: {
+    demo?: string;
+    code: string;
+  };
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -20,6 +24,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   links,
   badges,
   description,
+  labels,
 }) => {
   return (
     <div className="flex flex-col w-full gap-6 lg:w-5/6">
@@ -51,13 +56,13 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 
           <div className="flex items-center justify-center gap-4 md:justify-start">
             {links.demo && (
-              <Link href={links.demo.value} target="_blank">
-                <Button>{links.demo.label}</Button>
+              <Link href={links.demo} target="_blank">
+                <Button>{labels.demo}</Button>
               </Link>
             )}
             {links.code && (
-              <Link href={links.code.value} target="_blank">
-                <Button variant="secondary">{links.code.label}</Button>
+              <Link href={links.code} target="_blank">
+                <Button variant="secondary">{labels.code}</Button>
               </Link>
             )}
           </div>

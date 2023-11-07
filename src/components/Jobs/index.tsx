@@ -3,7 +3,7 @@ import { CoverCard } from "../Card/Cover";
 import { StaticImageData } from "next/image";
 
 type JobsProps = {
-  jobList: {
+  list: {
     title: string;
     description: string;
     link: string;
@@ -11,10 +11,10 @@ type JobsProps = {
   }[];
 };
 
-export const Jobs: React.FC<JobsProps> = ({ jobList }) => {
+export const Jobs: React.FC<JobsProps> = ({ list }) => {
   return (
     <div className="grid gap-4 mt-8 md:grid-cols-2 md:gap-10 lg:gap-20 place-items-center sm:px-8 md:px-0">
-      {jobList.map((job, i) => (
+      {list.map((job, i) => (
         <CoverCard
           title={job.title}
           link={job.link}
