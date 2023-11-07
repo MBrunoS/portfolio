@@ -156,3 +156,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     description: t.head.title,
   };
 }
+
+export async function generateStaticParams() {
+  return [{ lang: "en-US" }, { lang: "pt-BR" }];
+}
