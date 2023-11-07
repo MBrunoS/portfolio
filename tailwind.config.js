@@ -11,7 +11,6 @@ module.exports = {
         "secondary-color": "rgb(var(--secondary-color) / <alpha-value>)",
         "disabled-color": "rgb(var(--disabled-color) / <alpha-value>)",
         "highlight-color": "rgb(var(--highlight-color) / <alpha-value>)",
-        "text-color": "rgb(var(--text-color) / <alpha-value>)",
       },
       backgroundImage: {
         "card-gradient":

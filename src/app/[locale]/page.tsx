@@ -23,21 +23,12 @@ type Params = {
 };
 
 export default async function Home({ params }: Params) {
-  const t = await getTranslation(params.locale); // en
+  const t = await getTranslation(params.locale);
 
   const year = new Date().getFullYear();
 
   return (
     <div className="backgrounds">
-      <Navbar
-        links={[
-          { name: t.navbar.about, href: "#about" },
-          { name: t.navbar.jobs, href: "#jobs" },
-          { name: t.navbar.projects, href: "#projects" },
-          { name: t.navbar.articles, href: "#articles" },
-        ]}
-      />
-
       <Hero title="Maurício Bruno" tagline={t.hero.tagline}>
         <SocialLinks />
       </Hero>

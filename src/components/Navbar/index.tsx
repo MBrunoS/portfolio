@@ -37,7 +37,7 @@ export const Navbar: React.FC<NavbarProps> = ({ links }) => {
       <NavigationMenu.List>
         <NavigationMenu.Item>
           <NavigationMenu.Link
-            href="#/"
+            href="/#/"
             className="text-xl font-black text-primary-color"
             id="home"
           >
