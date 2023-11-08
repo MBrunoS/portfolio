@@ -12,6 +12,13 @@
         },
         "type": "UID"
       },
+      "summary": {
+        "type": "Text",
+        "config": {
+          "label": "summary",
+          "placeholder": ""
+        }
+      },
       "title": {
         "type": "Text",
         "config": {

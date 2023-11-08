@@ -11,6 +11,17 @@ type PostDocumentDataSlicesSlice = never;
  */
 interface PostDocumentData {
   /**
+   * summary field in *Post*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: post.summary
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  summary: prismic.KeyTextField;
+
+  /**
    * title field in *Post*
    *
    * - **Field Type**: Text
