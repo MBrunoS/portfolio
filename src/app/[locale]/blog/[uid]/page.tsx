@@ -69,10 +69,12 @@ export async function generateStaticParams() {
   const client = createClient();
   const pages = await client.getAllByType("post");
 
-  return pages.map((page) => {
+  const params = pages.map((page) => {
     return [
-      { locale: "en-US", uid: page.uid },
       { locale: "pt-BR", uid: page.uid },
+      { locale: "en-US", uid: page.uid },
     ];
   });
+
+  return params.flat();
 }

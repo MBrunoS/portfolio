@@ -21,6 +21,7 @@ export default async function Blog({ params }: Params) {
             src: post.data.cover.url!,
             alt: post.data.cover.alt!,
           }}
+          key={post.uid}
         >
           <>
             <h2 className="mb-2 text-2xl font-bold md:text-3xl text-primary-color hover:underline">
@@ -56,4 +57,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     title: t.blog.meta_title,
     description: t.blog.meta_description,
   };
+}
+
+export async function generateStaticParams() {
+  return [{ locale: "en-US" }, { locale: "pt-BR" }];
 }
