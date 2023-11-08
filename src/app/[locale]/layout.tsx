@@ -37,7 +37,7 @@ export default async function RootLayout({ children, params }: LayoutProps) {
             { name: t.navbar.about, href: "/#about" },
             { name: t.navbar.jobs, href: "/#jobs" },
             { name: t.navbar.projects, href: "/#projects" },
-            { name: t.navbar.articles, href: "/#articles" },
+            { name: t.navbar.talks, href: "/#talks" },
             { name: "Blog", href: "/blog" },
           ]}
         />

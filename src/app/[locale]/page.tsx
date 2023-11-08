@@ -109,8 +109,8 @@ export default async function Home({ params }: Params) {
         />
       </Section>
 
-      <Section id="articles">
-        <Heading as="h2">{t.articles.title}</Heading>
+      <Section id="talks">
+        <Heading as="h2">{t.talks.title}</Heading>
 
         <div className="grid justify-center grid-cols-1 gap-8 mt-16 md:grid-cols-2 sm:px-12 lg:px-20">
           <CoverCard
@@ -149,5 +149,5 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-  return [{ lang: "en-US" }, { lang: "pt-BR" }];
+  return [{ locale: "en-US" }, { locale: "pt-BR" }];
 }

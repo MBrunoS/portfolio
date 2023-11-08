@@ -6,7 +6,7 @@
     "about": "About",
     "jobs": "Jobs",
     "projects": "Projects",
-    "articles": "Articles"
+    "talks": "Talks"
   },
   "hero": {
     "tagline": "Full-Stack Developer"
@@ -46,19 +46,15 @@
       "description": "Social networking platform for devs to connect"
     }
   },
-  "articles": {
-    "title": "Articles",
-    "wpPlugins": {
-      "title": "Creating a plugin in WordPress with React (pt-BR)",
-      "description": "This article shows that creating your first WordPress plugins and blocks is relatively easy."
-    },
-    "designPrinciples": {
-      "title": "Design Principles for Frontend Devs (pt-BR)",
-      "description": "Basic design principles to help frontend developers create more beautiful and functional interfaces."
-    }
+  "talks": {
+    "title": "Talks"
   },
   "footer": {
     "headline": "Let's work together?",
     "button": "Send a message"
+  },
+  "blog": {
+    "meta_title": "Maurício Bruno - Blog",
+    "meta_description": "Blog about Web Development"
   }
 }
