@@ -38,6 +38,10 @@
     @apply scroll-smooth;
   }
 
+  p {
+    @apply text-base/7 md:text-lg/7 lg:text-xl/8;
+  }
+
   @media (min-width: 50em) {
     :root {
       --bg-scale: 1;
@@ -51,8 +55,8 @@
     /* min-height: 100%; */
     isolation: isolate;
     background:
-      /*footer*/ var(--bg-image-footer) bottom
-        center/var(--bg-gradient-size) no-repeat,
+      /*footer*/
+      var(--bg-image-footer) bottom center/var(--bg-gradient-size) no-repeat,
       /*header1*/ var(--bg-image-main-curves) top center/var(--bg-gradient-size)
         no-repeat,
       /*header2*/ var(--bg-image-main) top center/var(--bg-gradient-size)
