@@ -89,7 +89,7 @@ export default async function Home({ params }: Params) {
                 demo: "https://repowars.mbrunos.dev/",
                 code: "https://github.com/MBrunoS/repowars",
               },
-              badges: ["React", "Typescript", "GraphQL", "Vite", "React Icons"],
+              badges: ["React", "Typescript", "GraphQL"],
             },
             {
               title: t.projects.devconnect.title,
@@ -112,22 +112,14 @@ export default async function Home({ params }: Params) {
       <Section id="talks">
         <Heading as="h2">{t.talks.title}</Heading>
 
-        <div className="grid justify-center grid-cols-1 gap-8 mt-16 md:grid-cols-2 sm:px-12 lg:px-20">
-          <CoverCard
-            imgUrl="https://community.revelo.com.br/content/images/size/w2000/2022/11/BLOG-BR---Criando-um-plugin-no-WordPress-com-React.png"
-            title={t.articles.wpPlugins.title}
-            link="https://community.revelo.com/como-criar-um-plugin-wordpress-com-react/"
-          >
-            {t.articles.wpPlugins.description}
-          </CoverCard>
-
-          <CoverCard
-            imgUrl="https://community.revelo.com.br/content/images/size/w2000/2023/05/-----BLOG-COMMUNITY-BR---Princi-pios-de-Design-para-devs-Frontend.png"
-            title={t.articles.designPrinciples.title}
-            link="https://community.revelo.com.br/principios-de-design-para-devs-frontend/"
-          >
-            {t.articles.designPrinciples.description}
-          </CoverCard>
+        <div className="grid justify-center grid-cols-1 gap-8 mt-16 sm:px-12 md:max-w-2xl md:mx-auto">
+          <iframe
+            className="w-full h-auto border rounded-md border-highlight-color bg-card-gradient aspect-video"
+            src="https://speakerdeck.com/player/b2bc51290e624cf78cffb575176514cf"
+            title="Desvendando padrões de renderização de apps web"
+            allowFullScreen
+            data-ratio="1.7777777777777777"
+          ></iframe>
         </div>
       </Section>
 
