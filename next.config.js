@@ -8,6 +8,9 @@ const nextConfig = {
       {
         hostname: "community.revelo.com.br",
       },
+      {
+        hostname: "images.unsplash.com",
+      },
     ],
   },
 };

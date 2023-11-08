@@ -23,12 +23,11 @@ export default async function Page({ params }: { params: Params }) {
   );
 
   return (
-    <main className="pb-6 pt-36">
+    <>
       <PrismicNextImage
         field={page.data.cover}
         className="object-cover max-h-40 md:max-h-52 lg:max-h-72"
       />
-
       <article className="max-w-5xl px-8 mx-auto md:px-12 lg:px-16 text-secondary-color">
         <h1 className="mt-10 mb-2 text-4xl font-bold text-center md:text-5xl lg:text-6xl text-primary-color">
           {page.data.title}
@@ -46,7 +45,7 @@ export default async function Page({ params }: { params: Params }) {
           components={components as JSXMapSerializer}
         />
       </article>
-    </main>
+    </>
   );
 }
 
