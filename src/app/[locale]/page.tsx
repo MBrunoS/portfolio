@@ -1,8 +1,6 @@
-import { Navbar } from "@/components/Navbar";
 import { Heading } from "@/components/Heading";
 import { Projects } from "@/components/Projects";
 import { Section } from "@/components/Section";
-import { CoverCard } from "@/components/Card/Cover";
 import { Jobs } from "@/components/Jobs";
 import { Hero } from "@/components/Hero";
 import { SocialLinks } from "@/components/SocialLinks";
@@ -13,7 +11,7 @@ import { dictionaries, getTranslation } from "./i18n";
 import ia from "@/assets/ia.webp";
 import sorriso from "@/assets/sorriso.webp";
 import wood from "@/assets/wood.webp";
-import devconnect from "@/assets/devconnect.webp";
+import arcCarousel from "@/assets/arc-carousel.webp";
 import repowars from "@/assets/repowars.webp";
 
 type Params = {
@@ -82,6 +80,16 @@ export default async function Home({ params }: Params) {
         <Projects
           list={[
             {
+              title: t.projects.arcCarousel.title,
+              description: t.projects.arcCarousel.description,
+              imgSrc: arcCarousel,
+              links: {
+                demo: "https://arc-carousel.mbrunos.dev/",
+                code: "https://github.com/MBrunoS/arc-carousel",
+              },
+              badges: ["React", "Typescript"],
+            },
+            {
               title: t.projects.repowars.title,
               description: t.projects.repowars.description,
               imgSrc: repowars,
@@ -90,16 +98,6 @@ export default async function Home({ params }: Params) {
                 code: "https://github.com/MBrunoS/repowars",
               },
               badges: ["React", "Typescript", "GraphQL"],
-            },
-            {
-              title: t.projects.devconnect.title,
-              description: t.projects.devconnect.description,
-              imgSrc: devconnect,
-              links: {
-                demo: "https://devconnect.mbrunos.dev/",
-                code: "https://github.com/MBrunoS/devconnect",
-              },
-              badges: ["Next.js", "Typescript", "Prisma", "Markdoc"],
             },
           ]}
           labels={{

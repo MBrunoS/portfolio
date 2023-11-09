@@ -34,16 +34,16 @@
   },
   "projects": {
     "title": "Projects",
-    "subtitle": "Projects designed to improve my skills",
+    "subtitle": "Projects designed to improve my skills and help the community",
     "demo": "Demo",
     "code": "Code",
     "repowars": {
       "title": "RepoWars",
       "description": "GitHub repository battle game"
     },
-    "devconnect": {
-      "title": "DevConnect",
-      "description": "Social networking platform for devs to connect"
+    "arcCarousel": {
+      "title": "Arc Carousel",
+      "description": "React library for creating carousels with ease"
     }
   },
   "talks": {

@@ -34,16 +34,16 @@
   },
   "projects": {
     "title": "Projetos",
-    "subtitle": "Projetos desenvolvidos para aprimorar minhas habilidades",
+    "subtitle": "Projetos desenvolvidos para aprimorar minhas habilidades e ajudar a comunidade",
     "demo": "Demo",
     "code": "Código",
     "repowars": {
       "title": "RepoWars",
       "description": "Jogo de batalha de repositórios do GitHub"
     },
-    "devconnect": {
-      "title": "DevConnect",
-      "description": "Plataforma de rede social para devs poderem se conectar"
+    "arcCarousel": {
+      "title": "Arc Carousel",
+      "description": "Biblioteca React para criar carrosséis com facilidade"
     }
   },
   "talks": {
