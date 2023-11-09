@@ -15,27 +15,27 @@ export const WideCard: React.FC<WideCardProps> = ({ img, children }) => {
     src: img.src,
     alt: img.alt,
     className:
-      "w-full md:max-w-xs max-h-[11.25rem] object-cover border border-solid md:w-2/5 rounded-2xl border-highlight-color",
+      "w-full md:max-w-[15rem] md:h-full max-h-[10rem] object-cover border border-solid rounded-lg border-highlight-color aspect-video",
   };
 
   return (
-    <div className="flex flex-col w-full gap-6 lg:w-5/6">
-      <div className="flex flex-col items-center flex-grow px-3 py-6 border border-solid md:py-3 bg-card-gradient border-highlight-color rounded-2xl border-1 text-secondary-color md:text-left gap-x-8 md:flex-row">
+    <div className="w-full lg:w-5/6">
+      <div className="flex flex-col items-center flex-grow p-3 border border-solid md:p-4 bg-card-gradient border-highlight-color rounded-2xl border-1 text-secondary-color md:text-left gap-x-6 md:flex-row">
         {typeof img.src === "string" ? (
           <Image
             {...baseImgProps}
             placeholder={`data:image/svg+xml;base64,${shimmerImagePlaceholder(
-              400,
-              225
+              320,
+              213
             )}`}
-            width={400}
-            height={225}
+            width={320}
+            height={213}
           />
         ) : (
           <Image {...baseImgProps} placeholder="blur" />
         )}
 
-        <div>{children}</div>
+        <div className="max-sm:mt-2">{children}</div>
       </div>
     </div>
   );
