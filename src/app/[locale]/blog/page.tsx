@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { dictionaries, getTranslation } from "../i18n";
 import Link from "next/link";
+import { Heading } from "@/components/Heading";
 
 type Params = { params: { locale: keyof typeof dictionaries } };
 
@@ -14,7 +15,9 @@ export default async function Blog({ params }: Params) {
     .catch(() => notFound());
 
   return (
-    <section className="flex flex-col items-center max-w-5xl px-5 mx-auto gap-y-4 md:gap-y-6 lg:gap-y-8">
+    <section className="flex flex-col items-center max-w-5xl px-5 pt-10 mx-auto gap-y-4 md:gap-y-6 lg:gap-y-8">
+      <Heading className="mb-4">Blog</Heading>
+
       {page.results.map((post) => (
         <WideCard
           img={{
