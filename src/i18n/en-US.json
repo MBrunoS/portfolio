@@ -41,13 +41,17 @@
       "title": "RepoWars",
       "description": "GitHub repository battle game"
     },
-    "arcCarousel": {
+    "arc_carousel": {
       "title": "Arc Carousel",
       "description": "React library for creating carousels with ease"
     }
   },
   "talks": {
-    "title": "Talks"
+    "title": "Talks",
+    "rendering_patterns": {
+      "title": "Uncovering web app rendering patterns",
+      "description": "Talk on rendering patterns (such as SSR, SSG, CSR, etc.) as well as their advantages and advantages. Presented at PotiDayJS 2023."
+    }
   },
   "footer": {
     "headline": "Let's work together?",

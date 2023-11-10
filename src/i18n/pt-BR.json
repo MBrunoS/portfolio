@@ -41,13 +41,17 @@
       "title": "RepoWars",
       "description": "Jogo de batalha de repositórios do GitHub"
     },
-    "arcCarousel": {
+    "arc_carousel": {
       "title": "Arc Carousel",
       "description": "Biblioteca React para criar carrosséis com facilidade"
     }
   },
   "talks": {
-    "title": "Palestras"
+    "title": "Palestras",
+    "rendering_patterns": {
+      "title": "Desvendando padrões de renderização de apps web",
+      "description": "Palestra sobre padrões de renderização (como SSR, SSG, CSR, etc.), bem como suas vantagens e desvantagens. Apresentada no PotiDayJS 2023."
+    }
   },
   "footer": {
     "headline": "Vamos trabalhar juntos?",

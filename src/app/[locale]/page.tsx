@@ -13,6 +13,7 @@ import sorriso from "@/assets/sorriso.webp";
 import wood from "@/assets/wood.webp";
 import arcCarousel from "@/assets/arc-carousel.webp";
 import repowars from "@/assets/repowars.webp";
+import { CoverCard } from "@/components/Card/Cover";
 
 type Params = {
   params: {
@@ -80,8 +81,8 @@ export default async function Home({ params }: Params) {
         <Projects
           list={[
             {
-              title: t.projects.arcCarousel.title,
-              description: t.projects.arcCarousel.description,
+              title: t.projects.arc_carousel.title,
+              description: t.projects.arc_carousel.description,
               imgSrc: arcCarousel,
               links: {
                 demo: "https://arc-carousel.mbrunos.dev/",
@@ -111,13 +112,13 @@ export default async function Home({ params }: Params) {
         <Heading as="h2">{t.talks.title}</Heading>
 
         <div className="grid justify-center grid-cols-1 gap-8 mt-16 sm:px-12 md:max-w-2xl md:mx-auto">
-          <iframe
-            className="w-full h-auto border rounded-md border-highlight-color bg-card-gradient aspect-video"
-            src="https://speakerdeck.com/player/b2bc51290e624cf78cffb575176514cf"
-            title="Desvendando padrões de renderização de apps web"
-            allowFullScreen
-            data-ratio="1.7777777777777777"
-          ></iframe>
+          <CoverCard
+            title={t.talks.rendering_patterns.title}
+            link="https://speakerdeck.com/mbrunos/desvendando-padroes-de-renderizacao-de-apps-web"
+            imgUrl="https://files.speakerdeck.com/presentations/b2bc51290e624cf78cffb575176514cf/slide_0.jpg"
+          >
+            {t.talks.rendering_patterns.description}
+          </CoverCard>
         </div>
       </Section>
 
