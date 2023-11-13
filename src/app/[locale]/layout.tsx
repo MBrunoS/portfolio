@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import { Public_Sans, Rubik } from "next/font/google";
 import "@/styles/globals.css";
 import { Navbar } from "@/components/Navbar";
@@ -42,6 +43,7 @@ export default async function RootLayout({ children, params }: LayoutProps) {
           ]}
         />
         {children}
+        <Analytics />
       </body>
     </html>
   );
