@@ -9,7 +9,7 @@ const nextConfig = {
         hostname: "community.revelo.com.br",
       },
       {
-        hostname: "images.unsplash.com",
+        hostname: "images.prismic.io",
       },
       {
         hostname: "files.speakerdeck.com",
