@@ -7,6 +7,7 @@ import Link from "next/link";
 import { Heading } from "@/components/Heading";
 import { asText } from "@prismicio/client/richtext";
 import { getEstimatedReadingTimeInMinutes } from "@/utils/reading-time";
+import { PrismicNextImage } from "@prismicio/next";
 
 type Params = { params: { locale: keyof typeof dictionaries } };
 
@@ -30,6 +31,9 @@ export default async function Blog({ params }: Params) {
 
       {page.results.map((post) => (
         <WideCard
+          renderComponent={(props) => (
+            <PrismicNextImage field={post.data.cover} {...props} />
+          )}
           img={{
             src: post.data.cover.url!,
             alt: post.data.cover.alt!,

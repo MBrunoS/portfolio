@@ -8,9 +8,19 @@ interface WideCardProps {
     alt: string;
   };
   children: React.ReactNode;
+  renderComponent?: (props: {
+    className: string;
+    placeholder: `data:image/${string}`;
+    width: number;
+    height: number;
+  }) => React.ReactNode;
 }
 
-export const WideCard: React.FC<WideCardProps> = ({ img, children }) => {
+export const WideCard: React.FC<WideCardProps> = ({
+  img,
+  children,
+  renderComponent,
+}) => {
   const baseImgProps = {
     src: img.src,
     alt: img.alt,
@@ -21,16 +31,16 @@ export const WideCard: React.FC<WideCardProps> = ({ img, children }) => {
   return (
     <div className="w-full lg:w-5/6">
       <div className="flex flex-col items-center flex-grow p-3 border border-solid md:p-4 bg-card-gradient border-highlight-color rounded-2xl border-1 text-secondary-color md:text-left gap-x-6 md:flex-row">
-        {typeof img.src === "string" ? (
-          <Image
-            {...baseImgProps}
-            placeholder={`data:image/svg+xml;base64,${shimmerImagePlaceholder(
+        {renderComponent != undefined ? (
+          renderComponent({
+            className: baseImgProps.className,
+            placeholder: `data:image/svg+xml;base64,${shimmerImagePlaceholder(
               320,
               213
-            )}`}
-            width={320}
-            height={213}
-          />
+            )}`,
+            width: 320,
+            height: 213,
+          })
         ) : (
           <Image {...baseImgProps} placeholder="blur" />
         )}
