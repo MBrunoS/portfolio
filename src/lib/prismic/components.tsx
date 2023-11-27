@@ -23,7 +23,7 @@ export const components: RichTextMapSerializer<JSX.Element> = {
     <h6 className="my-2 font-bold text-md text-primary-color">{children}</h6>
   ),
   list: ({ children }) => <ul className="pl-6 list-disc">{children}</ul>,
-  listItem: ({ children }) => <li>{children}</li>,
+  listItem: ({ children }) => <li className="my-2">{children}</li>,
   oList: ({ children }) => <ol className="pl-6 list-decimal">{children}</ol>,
   oListItem: ({ children }) => <li>{children}</li>,
   preformatted: ({ children }) => (

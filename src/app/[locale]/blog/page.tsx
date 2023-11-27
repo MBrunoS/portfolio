@@ -14,7 +14,15 @@ type Params = { params: { locale: keyof typeof dictionaries } };
 export default async function Blog({ params }: Params) {
   const client = createClient();
   const page = await client
-    .getByType("post", { lang: params.locale })
+    .getByType("post", {
+      lang: params.locale,
+      orderings: [
+        {
+          field: "document.first_publication_date",
+          direction: "desc",
+        },
+      ],
+    })
     .catch(() => notFound());
 
   const readingTimes: Record<string, number> = {};
