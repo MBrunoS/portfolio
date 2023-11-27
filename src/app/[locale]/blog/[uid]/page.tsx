@@ -68,6 +68,7 @@ export async function generateMetadata({
   const client = createClient();
   const page = await client
     .getByUID("post", params.uid, {
+      lang: params.locale,
       fetchOptions: {
         cache: "no-store",
         next: { tags: ["prismic", "posts"] },
