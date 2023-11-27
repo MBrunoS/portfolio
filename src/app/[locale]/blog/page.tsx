@@ -22,6 +22,10 @@ export default async function Blog({ params }: Params) {
           direction: "desc",
         },
       ],
+      fetchOptions: {
+        cache: "no-store",
+        next: { tags: ["prismic", "posts"] },
+      },
     })
     .catch(() => notFound());
 
