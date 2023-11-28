@@ -37,7 +37,7 @@ export default async function Page({ params }: { params: Params }) {
     <>
       <PrismicNextImage
         field={page.data.cover}
-        className="object-cover max-h-48 md:max-h-72 lg:max-h-96 2xl:max-h-[30rem]"
+        className="object-cover max-h-48 md:max-h-72 lg:max-h-96 2xl:max-h-[30rem] w-full"
         priority
       />
       <article className="max-w-5xl px-8 mx-auto md:px-12 lg:px-16 text-secondary-color">
