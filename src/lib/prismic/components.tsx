@@ -27,7 +27,7 @@ export const components: RichTextMapSerializer<JSX.Element> = {
   oList: ({ children }) => <ol className="pl-6 list-decimal">{children}</ol>,
   oListItem: ({ children }) => <li>{children}</li>,
   preformatted: ({ children }) => (
-    <pre className="p-2 border rounded-md border-highlight-color bg-card-gradient">
+    <pre className="p-2 overflow-x-auto border rounded-md border-highlight-color bg-card-gradient">
       {children}
     </pre>
   ),
