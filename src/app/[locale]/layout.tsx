@@ -3,6 +3,7 @@ import { Public_Sans, Rubik } from "next/font/google";
 import "@/styles/globals.css";
 import { Navbar } from "@/components/Navbar";
 import { dictionaries, getTranslation } from "./i18n";
+import { AOSInit } from "@/components/AOSInit";
 
 const rubik = Rubik({
   subsets: ["latin"],
@@ -26,10 +27,11 @@ type LayoutProps = {
 export default async function RootLayout({ children, params }: LayoutProps) {
   const t = await getTranslation(params.locale);
   return (
-    <html lang="pt-br">
+    <html lang={params.locale}>
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
+      <AOSInit />
       <body
         className={`${rubik.variable} ${publicSans.variable} bg-[url("/assets/backgrounds/noise.png")] bg-[#090b11]`}
       >

@@ -16,6 +16,7 @@
     "@prismicio/react": "^2.7.3",
     "@radix-ui/react-navigation-menu": "^1.1.1",
     "@vercel/analytics": "^1.1.1",
+    "aos": "^2.3.4",
     "next": "^14.0.1",
     "next-reveal": "^1.0.6",
     "react": "18.2.0",
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "@slicemachine/adapter-next": "^0.3.23",
+    "@types/aos": "^3.0.7",
     "@types/node": "18.11.7",
     "@types/react": "18.0.23",
     "@types/react-dom": "18.0.7",
