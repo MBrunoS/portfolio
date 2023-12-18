@@ -1,9 +1,11 @@
 import { Analytics } from "@vercel/analytics/react";
 import { Public_Sans, Rubik } from "next/font/google";
-import "@/styles/globals.css";
 import { Navbar } from "@/components/Navbar";
 import { dictionaries, getTranslation } from "./i18n";
 import { AOSInit } from "@/components/AOSInit";
+
+import "arc-carousel/styles.css";
+import "@/styles/globals.css";
 
 const rubik = Rubik({
   subsets: ["latin"],
