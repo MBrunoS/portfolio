@@ -1,8 +1,5 @@
-import { HTMLAttributes } from "react";
-import { twMerge } from "tailwind-merge";
-
 type ExperienceCardProps = {
-  title: string;
+  company: string;
   role: string;
   period: string;
   description: string;
@@ -10,7 +7,7 @@ type ExperienceCardProps = {
 };
 
 export const ExperienceCard: React.FC<ExperienceCardProps> = ({
-  title,
+  company,
   role,
   period,
   description,
@@ -18,7 +15,7 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
 }) => {
   const content = (
     <>
-      <h3 className="text-xl font-bold text-white">{title}</h3>
+      <h3 className="text-xl font-bold text-white">{company}</h3>
       <p className="mb-4 text-base text-disabled-color">
         {role} | {period}
       </p>

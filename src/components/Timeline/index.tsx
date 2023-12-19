@@ -4,7 +4,7 @@ import { ExperienceCard } from "../Cards/Experience";
 
 type TimelineProps = HTMLAttributes<HTMLDivElement> & {
   experiences: {
-    title: string;
+    company: string;
     role: string;
     period: string;
     description: string;
@@ -24,8 +24,10 @@ export const Timeline: React.FC<TimelineProps> = ({
 
     elements.push(
       <>
-        <ExperienceCard {...leftExp} />
-        {rightExp && <ExperienceCard {...rightExp} direction="right" />}
+        <ExperienceCard {...leftExp} key={i} />
+        {rightExp && (
+          <ExperienceCard {...rightExp} direction="right" key={i + 1} />
+        )}
       </>
     );
   }

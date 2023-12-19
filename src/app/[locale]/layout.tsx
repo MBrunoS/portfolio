@@ -40,8 +40,8 @@ export default async function RootLayout({ children, params }: LayoutProps) {
         <Navbar
           links={[
             { name: t.navbar.about, href: "/#about" },
-            { name: t.navbar.jobs, href: "/#jobs" },
             { name: t.navbar.projects, href: "/#projects" },
+            { name: t.navbar.experience, href: "/#experience" },
             { name: t.navbar.talks, href: "/#talks" },
             { name: "Blog", href: "/blog" },
           ]}

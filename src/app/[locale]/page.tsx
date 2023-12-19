@@ -1,19 +1,16 @@
 import { Heading } from "@/components/Heading";
 import { Projects } from "@/components/Projects";
 import { Section } from "@/components/Section";
-import { Jobs } from "@/components/Jobs";
-import { Hero } from "@/components/Hero";
 import { SocialLinks } from "@/components/SocialLinks";
 import CTA from "@/components/CTA";
 import { SkillCards } from "@/components/SkillCards";
 import { Metadata } from "next";
 import { dictionaries, getTranslation } from "./i18n";
-import ia from "@/assets/ia.webp";
-import sorriso from "@/assets/sorriso.webp";
-import wood from "@/assets/wood.webp";
 import arcCarousel from "@/assets/arc-carousel.webp";
 import repowars from "@/assets/repowars.webp";
-import { CoverCard } from "@/components/Card/Cover";
+import { CoverCard } from "@/components/Cards/Cover";
+import { Timeline } from "@/components/Timeline";
+import { ProfilePic } from "@/components/ProfilePic";
 
 type Params = {
   params: {
@@ -28,12 +25,29 @@ export default async function Home({ params }: Params) {
 
   return (
     <div className="backgrounds">
-      <Hero title="Maurício Bruno" tagline={t.hero.tagline}>
-        <SocialLinks />
-      </Hero>
+      <Section id="/" variant="hero">
+        <div
+          className="flex flex-col items-center gap-3 text-center md:items-start md:text-start"
+          data-aos="fade-right"
+          data-aos-duration="200"
+        >
+          <Heading as="h1">Maurício Bruno</Heading>
+          <p className="text-xl text-secondary-color lg:text-3xl">
+            {t.hero.tagline}
+          </p>
+          <div className="flex gap-3 mt-2">
+            <SocialLinks />
+          </div>
+        </div>
+        <ProfilePic data-aos="fade-left" data-aos-duration="200" />
+      </Section>
 
       <Section id="about" variant="featured">
-        <div className="grid items-center lg:grid-cols-2 gap-y-8">
+        <div
+          className="grid items-center lg:grid-cols-2 gap-y-8"
+          data-aos="fade-up"
+          data-aos-offset="200"
+        >
           <div className="text-left text-secondary-color md:text-lg">
             <Heading as="h2">{t.about.title}</Heading>
             <p className="mt-8 mb-4">{t.about.firstParagraph}</p>
@@ -44,36 +58,12 @@ export default async function Home({ params }: Params) {
         </div>
       </Section>
 
-      <Section id="jobs">
-        <Heading as="h2">{t.jobs.title}</Heading>
-        <p className="mt-2 mb-12 text-lg text-secondary-color">
-          {t.jobs.subtitle}
-        </p>
-        <Jobs
-          list={[
-            {
-              title: t.jobs.ia.title,
-              description: t.jobs.ia.description,
-              link: "https://inglesaplicado.com.br/v2",
-              imgUrl: ia,
-            },
-            {
-              title: t.jobs.sorriso.title,
-              description: t.jobs.sorriso.description,
-              link: "https://clinicasorrisoecia.com.br/",
-              imgUrl: sorriso,
-            },
-            {
-              title: t.jobs.wood.title,
-              description: t.jobs.wood.description,
-              link: "https://woodexpress.ind.br/",
-              imgUrl: wood,
-            },
-          ]}
-        />
-      </Section>
-
-      <Section id="projects">
+      <Section
+        id="projects"
+        className="md:pt-28 lg:pt-36"
+        data-aos="fade-up"
+        data-aos-offset="300"
+      >
         <Heading as="h2">{t.projects.title}</Heading>
         <p className="mt-2 text-lg text-secondary-color">
           {t.projects.subtitle}
@@ -108,7 +98,21 @@ export default async function Home({ params }: Params) {
         />
       </Section>
 
-      <Section id="talks">
+      <Section id="experience" data-aos="fade-up" className="md:pt-28 lg:pt-36">
+        <Heading as="h2">{t.experience.title}</Heading>
+        <p className="mt-2 mb-12 text-lg text-secondary-color">
+          {t.experience.subtitle}
+        </p>
+
+        <Timeline experiences={t.experience.list} />
+      </Section>
+
+      <Section
+        id="talks"
+        className="lg:pt-32"
+        data-aos="fade-up"
+        data-aos-offset="300"
+      >
         <Heading as="h2">{t.talks.title}</Heading>
 
         <div className="grid justify-center grid-cols-1 gap-8 mt-16 sm:px-12 md:max-w-2xl md:mx-auto">

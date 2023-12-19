@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import { Hamburger } from "./Hamburger";
+import { twMerge } from "tailwind-merge";
 
 type NavbarProps = {
   links: {
@@ -31,9 +32,11 @@ export const Navbar: React.FC<NavbarProps> = ({ links }) => {
 
   return (
     <NavigationMenu.Root
-      className={`fixed w-full p-4 md:px-12 lg:px-20 md:py-10 z-10  transition-all ${
+      className={twMerge(
+        "fixed w-full p-4 md:px-12 lg:px-20 md:py-10 z-10 transition-all",
         isScrolling && "py-3 gap-y-1 md:py-5 bg-zinc-900/60 backdrop-blur-md"
-      }`}
+      )}
+      data-aos="fade-down"
     >
       <NavigationMenu.List className="flex flex-row items-center justify-between gap-2">
         <NavigationMenu.Item>
@@ -98,24 +101,6 @@ export const Navbar: React.FC<NavbarProps> = ({ links }) => {
           </NavigationMenu.Item>
         </div>
       </NavigationMenu.List>
-
-      {/* <NavigationMenu.List
-        className={`hidden md:flex gap-4 px-4 transition-border ml-auto ${
-          !isScrolling &&
-          "py-2 rounded-full border border-primary-color bg-zinc-900/60 shadow-md shadow-gray-50/20"
-        }`}
-      >
-        {links.map((link) => (
-          <NavigationMenu.Item key={link.name}>
-            <NavigationMenu.Link
-              href={link.href}
-              className="text-secondary-color hover:text-primary-color"
-            >
-              {link.name}
-            </NavigationMenu.Link>
-          </NavigationMenu.Item>
-        ))}
-      </NavigationMenu.List> */}
     </NavigationMenu.Root>
   );
 };
