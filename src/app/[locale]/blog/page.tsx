@@ -1,4 +1,4 @@
-import { WideCard } from "@/components/WideCard";
+import { WideCard } from "@/components/Cards/Wide";
 import { createClient } from "@/prismicio";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";

@@ -1,6 +1,6 @@
 import React from "react";
 import { StaticImageData } from "next/image";
-import { WideCard } from "../Card/Wide";
+import { WideCard } from "../Cards/Wide";
 import Link from "next/link";
 import { Button } from "../Button";
 

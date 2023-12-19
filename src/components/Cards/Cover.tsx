@@ -2,6 +2,7 @@ import { ArrowSquareOut } from "@phosphor-icons/react/dist/ssr";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import React from "react";
+import { twMerge } from "tailwind-merge";
 
 interface CoverCardProps {
   children: React.ReactNode;
@@ -19,17 +20,15 @@ export const CoverCard: React.FC<CoverCardProps> = ({
   className,
 }) => {
   return (
-    <div
-      className={`w-full bg-card-gradient border border-solid border-highlight-color rounded-2xl border-1 overflow-hidden ${className}`}
-    >
+    <div className={className}>
       <Image
         src={imgUrl}
         alt={title}
         fill
-        className="object-contain !relative !h-[unset]"
+        className="object-contain !relative !h-[unset] rounded-2xl"
       />
 
-      <div className="px-6 py-10">
+      <div className="py-10">
         <div className="mb-4 text-xl font-bold text-primary-color">
           <Link
             href={link}
