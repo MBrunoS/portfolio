@@ -1,6 +1,6 @@
 import React from "react";
 import { StaticImageData } from "next/image";
-import { WideCard } from "../WideCard";
+import { WideCard } from "../Card/Wide";
 import Link from "next/link";
 import { Button } from "../Button";
 
@@ -23,11 +23,12 @@ type ProjectsProps = {
 
 export const Projects: React.FC<ProjectsProps> = ({ list, labels }) => {
   return (
-    <div className="flex flex-col items-center justify-around gap-4 mt-16">
+    <div className="flex flex-col items-center justify-around gap-4 mt-8 md:mt-16">
       {list.map((project) => (
         <WideCard
           img={{ src: project.imgSrc, alt: project.title }}
           key={project.title}
+          data-aos="fade-up"
         >
           <div className="flex flex-col items-center md:items-start lg:items-center gap-y-2 gap-x-4 lg:flex-row">
             <h3 className="mt-2 text-2xl font-bold text-white md:mt-0">

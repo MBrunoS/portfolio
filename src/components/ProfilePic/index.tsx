@@ -1,10 +1,11 @@
-import Image from "next/image";
+import Image, { ImageProps } from "next/image";
 import React from "react";
 import profileImg from "../../assets/profile-pic.webp";
 
-export const ProfilePic: React.FC = () => {
+export const ProfilePic: React.FC<Partial<ImageProps>> = (props) => {
   return (
     <Image
+      {...props}
       src={profileImg}
       alt="Maurício Bruno"
       placeholder="blur"

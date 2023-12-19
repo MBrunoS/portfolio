@@ -1,47 +1,23 @@
-import React from "react";
-import { Fade } from "@/components/Fade";
+import React, { HTMLAttributes } from "react";
+import { twMerge } from "tailwind-merge";
 
-type SectionProps = {
-  id: string;
-  children: React.ReactNode;
+type SectionProps = HTMLAttributes<HTMLDivElement> & {
   variant?: "simple" | "hero" | "featured";
 };
 
 export const Section: React.FC<SectionProps> = ({
-  id,
-  children,
   variant = "simple",
+  className,
+  ...props
 }) => {
-  if (variant === "hero") {
-    return (
-      <section
-        id={id}
-        className="relative flex flex-col items-center justify-center h-screen"
-      >
-        {children}
-      </section>
-    );
-  } else if (variant === "featured") {
-    return (
-      <section
-        id={id}
-        className="px-4 py-16 border-solid sm:px-6 md:px-20 bg-card-gradient border-y border-highlight-color"
-      >
-        <Fade viewFactor={0.15} duration={300}>
-          {children}
-        </Fade>
-      </section>
-    );
-  }
+  const classNames = {
+    hero: "relative flex flex-col-reverse items-center justify-center gap-10 px-6 pb-20 md:flex-row pt-36 md:px-16 md:gap-20",
+    featured:
+      "px-4 py-16 border-solid sm:px-6 md:px-20 bg-card-gradient border-y border-highlight-color",
+    simple: "text-center pt-16 px-4 sm:px-6 md:px-20 max-w-[1400px] mx-auto",
+  };
 
   return (
-    <section
-      id={id}
-      className="text-center pt-16 px-4 sm:px-6 md:px-20 max-w-[1400px] mx-auto"
-    >
-      <Fade viewFactor={0.25} duration={500}>
-        {children}
-      </Fade>
-    </section>
+    <section className={twMerge(classNames[variant], className)} {...props} />
   );
 };
