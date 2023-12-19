@@ -16,21 +16,41 @@
     "firstParagraph": "Sou um desenvolvedor de software full-stack apaixonado por criar experiências digitais envolventes. Com uma sólida experiência em front-end e design gráfico, combino habilidades técnicas com uma visão estética para desenvolver soluções inovadoras.",
     "secondParagraph": "Meu objetivo é desenvolver soluções modernas e escaláveis que superem as expectativas. Valorizo a colaboração e o trabalho em equipe, além de compartilhar conhecimentos com outros desenvolvedores."
   },
-  "jobs": {
-    "title": "Trabalhos",
-    "subtitle": "Alguns dos meus últimos trabalhos",
-    "ia": {
-      "title": "Inglês Aplicado",
-      "description": "Reformulação de todo o site"
-    },
-    "sorriso": {
-      "title": "Clínica Sorriso & Cia",
-      "description": "Criação de landing page e plugin para agendamento das consultas"
-    },
-    "wood": {
-      "title": "Wood Express",
-      "description": "Site e plataforma de e-commerce para venda de móveis sob medida"
-    }
+  "experience": {
+    "title": "Experiência",
+    "subtitle": "Minha trajetória profissional",
+    "list": [
+      {
+        "title": "WoohooPlus",
+        "role": "Desenvolvedor Front-End",
+        "period": "Jun 2023 - Presente",
+        "description": "Liderei o desenvolvimento front-end, garantindo escalabilidade e mantenabilidade através da arquitetura e qualidade de código. Colaborei com equipes de design e back-end para garantir a integração perfeita de interfaces de usuário e funcionalidades complexas. Desenvolvi e aprimorei a plataforma para garantir conformidade com os padrões de acessibilidade e otimização de desempenho."
+      },
+      {
+        "title": "Forja",
+        "role": "Engenheiro de Software",
+        "period": "Jun 2021 - Presente",
+        "description": "Liderei equipe de desenvolvimento front-end, assegurando entregas de alta qualidade. Colaborei proativamente com a equipe de UX/UI para melhorar a experiência do usuário, implementando designs inovadores e interativos. Mentorei outros desenvolvedores a expandirem suas habilidades em Next.js, React e Typescript."
+      },
+      {
+        "title": "Reach Digital Marketing",
+        "role": "Desenvolvedor Web",
+        "period": "Abr 2022 - Jan 2023",
+        "description": "Gerenciei e desenvolvi sites, páginas e e-commerces, garantindo estabilidade e usabilidade, o que impactou na retenção de clientes. Criei e documentei processos de desenvolvimento, diminuindo tempo de onboarding."
+      },
+      {
+        "title": "Freelancer",
+        "role": "Desenvolvedor Front-End",
+        "period": "Mar 2020 - Fev 2022",
+        "description": "Desenvolvi plataformas de gerenciamento para projetos sociais, automatizando tarefas. Implementei software sob medida para atender às demandas exclusivas de ambientes eclesiásticos."
+      },
+      {
+        "title": "XMachina",
+        "role": "Developer de Software",
+        "period": "Jun 2015 - Set 2015",
+        "description": "Implementei sistema para visualização dos dados gerados pelo produto principal da empresa, o que impulsionou a percepção dos usuários sobre o mesmo e alavancou as vendas. Auxiliei no desenvolvimento de funcionalidades na comunicação entre módulos, reduzindo gargalo no sistema."
+      }
+    ]
   },
   "projects": {
     "title": "Projetos",
