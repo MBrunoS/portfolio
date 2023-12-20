@@ -43,7 +43,6 @@ export default async function RootLayout({ children, params }: LayoutProps) {
             { name: t.navbar.projects, href: "/#projects" },
             { name: t.navbar.experience, href: "/#experience" },
             { name: t.navbar.talks, href: "/#talks" },
-            { name: "Blog", href: "/blog" },
           ]}
         />
         {children}
