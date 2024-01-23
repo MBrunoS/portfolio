@@ -8,6 +8,8 @@ import { Metadata } from "next";
 import { dictionaries, getTranslation } from "./i18n";
 import arcCarousel from "@/assets/arc-carousel.webp";
 import repowars from "@/assets/repowars.webp";
+import nextCRUDGen from "@/assets/next-crud-gen.webp";
+import dsa from "@/assets/dsa.webp";
 import { CoverCard } from "@/components/Cards/Cover";
 import { Timeline } from "@/components/Timeline";
 import { ProfilePic } from "@/components/ProfilePic";
@@ -75,24 +77,43 @@ export default async function Home({ params }: Params) {
               description: t.projects.arc_carousel.description,
               imgSrc: arcCarousel,
               links: {
-                demo: "https://arc-carousel.mbrunos.dev/",
+                site: "https://arc-carousel.mbrunos.dev/",
                 code: "https://github.com/MBrunoS/arc-carousel",
               },
-              badges: ["React", "Typescript"],
+              badges: ["React", "Typescript", "Astro", "Vitest"],
+            },
+            {
+              title: t.projects.next_crud_gen.title,
+              description: t.projects.next_crud_gen.description,
+              imgSrc: nextCRUDGen,
+              links: {
+                site: "https://www.npmjs.com/package/prisma-next-crud-generator",
+                code: "https://github.com/MBrunoS/prisma-next-crud-generator",
+              },
+              badges: ["Next.js", "Prisma", "Typescript", "Jest"],
+            },
+            {
+              title: t.projects.dsa.title,
+              description: t.projects.dsa.description,
+              imgSrc: dsa,
+              links: {
+                code: "https://github.com/MBrunoS/dsa",
+              },
+              badges: ["React", "Typescript", "Vitest"],
             },
             {
               title: t.projects.repowars.title,
               description: t.projects.repowars.description,
               imgSrc: repowars,
               links: {
-                demo: "https://repowars.mbrunos.dev/",
+                site: "https://repowars.mbrunos.dev/",
                 code: "https://github.com/MBrunoS/repowars",
               },
               badges: ["React", "Typescript", "GraphQL"],
             },
           ]}
           labels={{
-            demo: t.projects.demo,
+            site: t.projects.site,
             code: t.projects.code,
           }}
         />

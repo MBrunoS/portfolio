@@ -55,7 +55,7 @@
   "projects": {
     "title": "Projects",
     "subtitle": "Projects designed to improve my skills and help the community",
-    "demo": "Demo",
+    "site": "Website",
     "code": "Code",
     "repowars": {
       "title": "RepoWars",
@@ -64,6 +64,14 @@
     "arc_carousel": {
       "title": "Arc Carousel",
       "description": "React library for creating carousels with ease"
+    },
+    "next_crud_gen": {
+      "title": "Prisma Next CRUD Generator",
+      "description": "NPM package to generate CRUD Next.js applications from a Prisma schema"
+    },
+    "dsa": {
+      "title": "DSA",
+      "description": "Data Structures and Algorithms in TypeScript"
     }
   },
   "talks": {

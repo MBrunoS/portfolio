@@ -10,13 +10,13 @@ type ProjectsProps = {
     description: string;
     imgSrc: StaticImageData;
     links: {
-      demo?: string;
+      site?: string;
       code: string;
     };
     badges: string[];
   }[];
   labels: {
-    demo?: string;
+    site?: string;
     code: string;
   };
 };
@@ -47,14 +47,14 @@ export const Projects: React.FC<ProjectsProps> = ({ list, labels }) => {
             </div>
           </div>
 
-          <p className="px-2 mt-2 mb-6 text-base md:px-0">
+          <p className="px-2 mt-2 mb-4 text-base md:px-0">
             {project.description}
           </p>
 
           <div className="flex items-center justify-center gap-4 md:justify-start">
-            {project.links.demo && (
-              <Link href={project.links.demo} target="_blank">
-                <Button>{labels.demo}</Button>
+            {project.links.site && (
+              <Link href={project.links.site} target="_blank">
+                <Button>{labels.site}</Button>
               </Link>
             )}
             {project.links.code && (
