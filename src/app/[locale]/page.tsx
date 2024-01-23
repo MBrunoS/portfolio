@@ -99,7 +99,7 @@ export default async function Home({ params }: Params) {
               links: {
                 code: "https://github.com/MBrunoS/dsa",
               },
-              badges: ["React", "Typescript", "Vitest"],
+              badges: ["Typescript", "Vitest"],
             },
             {
               title: t.projects.repowars.title,
