@@ -71,7 +71,7 @@ export const Navbar: React.FC<NavbarProps> = ({ links }) => {
 
           <Separator.Root
             orientation="vertical"
-            className="w-px bg-primary-color"
+            className="w-px mx-1 bg-primary-color"
           />
 
           <NavigationMenu.Item>
@@ -110,7 +110,7 @@ export const Navbar: React.FC<NavbarProps> = ({ links }) => {
                     </NavigationMenu.Item>
                   ))}
 
-                  <Separator.Root className="h-px bg-primary-color" />
+                  <Separator.Root className="h-px my-2 bg-primary-color" />
 
                   <NavigationMenu.Item>
                     <NavigationMenu.Link
