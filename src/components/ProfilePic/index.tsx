@@ -1,8 +1,7 @@
 import Image, { ImageProps } from "next/image";
-import React from "react";
 import profileImg from "../../assets/profile-pic.webp";
 
-export const ProfilePic: React.FC<Partial<ImageProps>> = (props) => {
+export function ProfilePic(props: Partial<ImageProps>) {
   return (
     <Image
       {...props}
@@ -14,4 +13,4 @@ export const ProfilePic: React.FC<Partial<ImageProps>> = (props) => {
       className={`animate-glow max-w-[200px] md:max-w-[400px] border-4 lg:border-8 border-primary-color rounded-full`}
     />
   );
-};
+}

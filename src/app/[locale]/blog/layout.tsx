@@ -1,5 +1,7 @@
+import type { ReactNode } from "react";
+
 type LayoutProps = {
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 export default function BlogLayout({ children }: LayoutProps) {

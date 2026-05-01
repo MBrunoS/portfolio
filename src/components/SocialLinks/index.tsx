@@ -1,9 +1,8 @@
-import React from "react";
 import Link from "next/link";
 import { GithubLogo, LinkedinLogo } from "@phosphor-icons/react/dist/ssr";
 import { Button } from "../Button";
 
-export const SocialLinks: React.FC = () => {
+export function SocialLinks() {
   const links = [
     { url: "https://github.com/mbrunos", name: "Github", Icon: GithubLogo },
     {
@@ -22,4 +21,4 @@ export const SocialLinks: React.FC = () => {
       ))}
     </div>
   );
-};
+}

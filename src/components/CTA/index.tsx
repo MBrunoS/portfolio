@@ -1,17 +1,22 @@
-import React from "react";
 import { Button } from "../Button";
 import { PaperPlaneTilt } from "@phosphor-icons/react/dist/ssr";
 import Link from "next/link";
 
 type CTAProps = {
-  headline: string;
+  headline?: string;
   button: string;
 };
 
-const CTA: React.FC<CTAProps> = ({ headline, button }) => {
+function CTA({ headline, button }: CTAProps) {
   return (
-    <aside className="flex flex-col items-center md:flex-row md:justify-between gap-y-4 lg:px-16">
-      <h2 className="text-2xl font-bold lg:text-4xl">{headline}</h2>
+    <aside
+      className={`flex flex-col items-center gap-y-4 lg:px-16 ${
+        headline ? "md:flex-row md:justify-between" : "justify-center"
+      }`}
+    >
+      {headline && (
+        <h2 className="text-2xl font-bold lg:text-4xl">{headline}</h2>
+      )}
 
       <Link href="mailto:contact@mbrunos.dev" target="_blank">
         <Button
@@ -24,6 +29,6 @@ const CTA: React.FC<CTAProps> = ({ headline, button }) => {
       </Link>
     </aside>
   );
-};
+}
 
 export default CTA;

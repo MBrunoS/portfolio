@@ -1,4 +1,5 @@
-import { Fragment, HTMLAttributes } from "react";
+import { Fragment } from "react";
+import type { HTMLAttributes, ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
 import { ExperienceCard } from "../Cards/Experience";
 
@@ -11,12 +12,12 @@ type TimelineProps = HTMLAttributes<HTMLDivElement> & {
   }[];
 };
 
-export const Timeline: React.FC<TimelineProps> = ({
+export function Timeline({
   experiences,
   className,
   ...props
-}) => {
-  const elements = [];
+}: TimelineProps) {
+  const elements: ReactNode[] = [];
 
   for (let i = 0; i < experiences.length; i += 2) {
     const leftExp = experiences[i];
@@ -39,4 +40,4 @@ export const Timeline: React.FC<TimelineProps> = ({
       </div>
     </div>
   );
-};
+}

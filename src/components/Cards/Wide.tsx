@@ -1,6 +1,6 @@
 import { shimmerImagePlaceholder } from "@/utils/shimmer-img-placeholder";
 import Image, { StaticImageData } from "next/image";
-import React, { HTMLAttributes } from "react";
+import type { HTMLAttributes, ReactNode } from "react";
 
 type WideCardProps = HTMLAttributes<HTMLDivElement> & {
   img: {
@@ -12,15 +12,15 @@ type WideCardProps = HTMLAttributes<HTMLDivElement> & {
     placeholder: `data:image/${string}`;
     width: number;
     height: number;
-  }) => React.ReactNode;
+  }) => ReactNode;
 };
 
-export const WideCard: React.FC<WideCardProps> = ({
+export function WideCard({
   img,
   children,
   renderComponent,
   ...props
-}) => {
+}: WideCardProps) {
   const baseImgProps = {
     src: img.src,
     alt: img.alt,
@@ -54,4 +54,4 @@ export const WideCard: React.FC<WideCardProps> = ({
       </div>
     </div>
   );
-};
+}

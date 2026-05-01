@@ -1,15 +1,15 @@
-import React, { HTMLAttributes } from "react";
+import type { HTMLAttributes } from "react";
 import { twMerge } from "tailwind-merge";
 
 type SectionProps = HTMLAttributes<HTMLDivElement> & {
   variant?: "simple" | "hero" | "featured";
 };
 
-export const Section: React.FC<SectionProps> = ({
+export function Section({
   variant = "simple",
   className,
   ...props
-}) => {
+}: SectionProps) {
   const classNames = {
     hero: "relative flex flex-col-reverse items-center justify-center gap-10 px-6 pb-20 md:flex-row pt-36 md:px-16 md:gap-20",
     featured:
@@ -20,4 +20,4 @@ export const Section: React.FC<SectionProps> = ({
   return (
     <section className={twMerge(classNames[variant], className)} {...props} />
   );
-};
+}

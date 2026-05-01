@@ -1,4 +1,3 @@
-import React from "react";
 import { StaticImageData } from "next/image";
 import { WideCard } from "../Cards/Wide";
 import Link from "next/link";
@@ -21,7 +20,7 @@ type ProjectsProps = {
   };
 };
 
-export const Projects: React.FC<ProjectsProps> = ({ list, labels }) => {
+export function Projects({ list, labels }: ProjectsProps) {
   return (
     <div className="flex flex-col items-center justify-around gap-4 mt-8 md:mt-16 md:gap-8">
       {list.map((project) => (
@@ -67,4 +66,4 @@ export const Projects: React.FC<ProjectsProps> = ({ list, labels }) => {
       ))}
     </div>
   );
-};
+}

@@ -1,60 +1,117 @@
 {
   "head": {
-    "title": "Maurício Bruno - Desenvolvedor Full-Stack"
+    "title": "Maurício Bruno - Senior Full-Stack Engineer"
   },
   "navbar": {
     "about": "Sobre",
+    "impact": "Impacto",
     "projects": "Projetos",
     "experience": "Experiência",
     "talks": "Palestras"
   },
   "hero": {
-    "tagline": "Desenvolvedor Full-Stack"
+    "tagline": "Senior Full-Stack Engineer focado em arquitetura web, produto SaaS e liderança técnica hands-on.",
+    "subtitle": "Construo aplicações React, Next.js e Node.js escaláveis, manuteníveis e confiáveis para times de produto que precisam evoluir com velocidade e qualidade.",
+    "cta": "Ver experiência"
   },
   "about": {
-    "title": "Sobre Mim",
-    "firstParagraph": "Sou um desenvolvedor de software full-stack apaixonado por criar experiências digitais envolventes. Com uma sólida experiência em front-end e design gráfico, combino habilidades técnicas com uma visão estética para desenvolver soluções inovadoras.",
-    "secondParagraph": "Meu objetivo é desenvolver soluções modernas e escaláveis que superem as expectativas. Valorizo a colaboração e o trabalho em equipe, além de compartilhar conhecimentos com outros desenvolvedores."
+    "title": "Liderança técnica para produtos web em escala",
+    "firstParagraph": "Atuo entre produto, engenharia e design para transformar sistemas complexos em aplicações web sustentáveis. Meu trabalho combina arquitetura full-stack, performance, CI/CD, qualidade de código e uma preocupação constante com a experiência de quem usa e de quem mantém o produto.",
+    "secondParagraph": "Tenho 7+ anos de experiência entregando features críticas, modernizando módulos legados, guiando decisões técnicas e mentoreando desenvolvedores em ambientes SaaS de ritmo acelerado."
+  },
+  "strengths": {
+    "title": "Forças técnicas",
+    "subtitle": "Áreas onde costumo gerar clareza, velocidade e previsibilidade para o time.",
+    "list": [
+      {
+        "title": "Architecture & Maintainability",
+        "description": "Estruturo front-ends, backends e monorepos para reduzir acoplamento, facilitar evolução e diminuir dívida técnica."
+      },
+      {
+        "title": "Performance & Scalability",
+        "description": "Otimizo fluxos críticos, queries, server state e renderização para melhorar latência, throughput e experiência do usuário."
+      },
+      {
+        "title": "CI/CD & Developer Experience",
+        "description": "Melhoro pipelines, estratégias de teste e padrões de entrega para aumentar confiança sem travar o ritmo do time."
+      },
+      {
+        "title": "Product Engineering Leadership",
+        "description": "Conecto decisões técnicas a objetivos de produto, colaborando com design, backend e liderança para entregar software confiável."
+      }
+    ]
+  },
+  "impact": {
+    "title": "Impacto selecionado",
+    "subtitle": "Resultados técnicos recentes em produtos SaaS e plataformas web em produção.",
+    "list": [
+      {
+        "metric": "200%",
+        "title": "Mais velocidade de desenvolvimento",
+        "description": "Arquitetura de migração modular em um módulo central, com sincronização de estado em tempo real usando WebSockets."
+      },
+      {
+        "metric": "66%",
+        "title": "Menos tempo em workflows críticos",
+        "description": "Otimização de fluxos backend com processamento concorrente, aumentando throughput em operações centrais."
+      },
+      {
+        "metric": "40%",
+        "title": "Menos latência em serviços críticos",
+        "description": "Refatoração de serviços backend e queries de banco, mantendo controles de acesso e limites de uso robustos."
+      },
+      {
+        "metric": "50%",
+        "title": "Menos consumo de memória no build",
+        "description": "Modernização de pipeline e processo de build, melhorando estabilidade e eficiência de deploy."
+      }
+    ]
   },
   "experience": {
     "title": "Experiência",
-    "subtitle": "Minha trajetória profissional",
+    "subtitle": "Trajetória em engenharia de produto, arquitetura web e liderança técnica",
     "list": [
       {
-        "company": "WoohooPlus",
-        "role": "Desenvolvedor Front-End",
-        "period": "Jun 2023 - Presente",
-        "description": "Liderei o desenvolvimento front-end, garantindo escalabilidade e mantenabilidade através da arquitetura e qualidade de código. Colaborei com equipes de design e back-end para garantir a integração perfeita de interfaces de usuário e funcionalidades complexas. Desenvolvi e aprimorei a plataforma para garantir conformidade com os padrões de acessibilidade e otimização de desempenho."
+        "company": "The Operator Group",
+        "role": "Full-Stack Engineer",
+        "period": "Jan 2026 - Presente",
+        "description": "Liderei o desenvolvimento de um novo admin panel, reestruturei a camada de autenticação com better-auth e otimizei workflows backend, reduzindo tempo de execução em cerca de 66%. Também defini melhorias de CI/CD com merge queue FIFO e estratégia de testes por estágio."
       },
       {
-        "company": "Forja",
-        "role": "Engenheiro de Software",
-        "period": "Jun 2021 - Presente",
-        "description": "Liderei equipe de desenvolvimento front-end, assegurando entregas de alta qualidade. Colaborei proativamente com a equipe de UX/UI para melhorar a experiência do usuário, implementando designs inovadores e interativos. Mentorei outros desenvolvedores a expandirem suas habilidades em Next.js, React e Typescript."
+        "company": "Sendspark",
+        "role": "Full-Stack Engineer",
+        "period": "Jun 2024 - Dez 2025",
+        "description": "Arquitetei uma migração modular de um módulo monolítico central para um time de 4 pessoas, usando WebSockets para sincronização em tempo real. Otimizei serviços Node.js/TypeScript, reduzindo tempo médio de campanhas em 33%, latência em 40% e consumo de memória no build em 50%."
+      },
+      {
+        "company": "Forja Dev",
+        "role": "Tech Lead & Senior Software Engineer",
+        "period": "Set 2022 - Set 2025",
+        "description": "Liderei iniciativas front-end, defini a base técnica de um monorepo full-stack com Hono, Next.js e Turborepo, documentei protocolos de engenharia e entreguei workshops e mentorias para desenvolvedores da comunidade JavaScript."
+      },
+      {
+        "company": "WoohooPlus",
+        "role": "Senior Front-End Engineer",
+        "period": "Jun 2023 - Jun 2024",
+        "description": "Assumi o roadmap front-end de uma plataforma de fundraising cripto, entregando dashboards financeiros complexos, otimizando server state com React Query e criando uma biblioteca com 20+ componentes reutilizáveis."
       },
       {
         "company": "Reach Digital Marketing",
-        "role": "Desenvolvedor Web",
+        "role": "Full-Stack Developer",
         "period": "Abr 2022 - Jan 2023",
-        "description": "Gerenciei e desenvolvi sites, páginas e e-commerces, garantindo estabilidade e usabilidade, o que impactou na retenção de clientes. Criei e documentei processos de desenvolvimento, diminuindo tempo de onboarding."
+        "description": "Entreguei 10+ produtos digitais end-to-end, incluindo soluções Node.js/React para agendamento e validação de benefícios. Melhorei performance, Core Web Vitals e conversão para clientes da agência."
       },
       {
-        "company": "Freelancer",
-        "role": "Desenvolvedor Front-End",
+        "company": "Independent Software Consultant",
+        "role": "Full-Stack Developer",
         "period": "Mar 2020 - Fev 2022",
-        "description": "Desenvolvi plataformas de gerenciamento para projetos sociais, automatizando tarefas. Implementei software sob medida para atender às demandas exclusivas de ambientes eclesiásticos."
-      },
-      {
-        "company": "XMachina",
-        "role": "Desenvolvedor de Software",
-        "period": "Jun 2015 - Set 2015",
-        "description": "Implementei sistema para visualização dos dados gerados pelo produto principal da empresa, o que impulsionou a percepção dos usuários sobre o mesmo e alavancou as vendas. Auxiliei no desenvolvimento de funcionalidades na comunicação entre módulos, reduzindo gargalo no sistema."
+        "description": "Desenvolvi aplicações administrativas, ferramentas de apresentação em tempo real e automações de processos para organizações sem fins lucrativos, traduzindo fluxos manuais em produtos web acessíveis."
       }
     ]
   },
   "projects": {
     "title": "Projetos",
-    "subtitle": "Projetos desenvolvidos para aprimorar minhas habilidades e ajudar a comunidade",
+    "subtitle": "Projetos e ferramentas que mostram exploração técnica, produto e código aberto.",
     "site": "Website",
     "code": "Código",
     "repowars": {
@@ -82,11 +139,10 @@
     }
   },
   "footer": {
-    "headline": "Vamos trabalhar juntos?",
-    "button": "Envie uma mensagem"
+    "button": "Vamos conversar"
   },
   "blog": {
     "meta_title": "Maurício Bruno - Blog",
-    "meta_description": "Blog sobe Desenvolvimento Web"
+    "meta_description": "Blog sobre Desenvolvimento Web"
   }
 }

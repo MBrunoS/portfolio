@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import * as Separator from "@radix-ui/react-separator";
 import { Hamburger } from "./Hamburger";
@@ -14,7 +14,7 @@ type NavbarProps = {
   links: (Link & { sublinks?: Link[] })[];
 };
 
-export const Navbar: React.FC<NavbarProps> = ({ links }) => {
+export function Navbar({ links }: NavbarProps) {
   const [isScrolling, setIsScrolling] = useState(false);
 
   function scrollHandler() {
@@ -47,7 +47,7 @@ export const Navbar: React.FC<NavbarProps> = ({ links }) => {
             className="text-xl font-black md:text-2xl lg:text-3xl text-primary-color"
             id="home"
           >
-            MBrunoS
+            MB
           </NavigationMenu.Link>
         </NavigationMenu.Item>
 
@@ -129,4 +129,4 @@ export const Navbar: React.FC<NavbarProps> = ({ links }) => {
       <NavigationMenu.Viewport />
     </NavigationMenu.Root>
   );
-};
+}

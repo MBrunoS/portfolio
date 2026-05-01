@@ -6,13 +6,13 @@ type ExperienceCardProps = {
   direction?: "left" | "right";
 };
 
-export const ExperienceCard: React.FC<ExperienceCardProps> = ({
+export function ExperienceCard({
   company,
   role,
   period,
   description,
   direction = "left",
-}) => {
+}: ExperienceCardProps) {
   const content = (
     <>
       <h3 className="text-xl font-bold text-white">{company}</h3>
@@ -58,4 +58,4 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
       </div>
     </div>
   );
-};
+}

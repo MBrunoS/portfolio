@@ -3,7 +3,6 @@ import { Projects } from "@/components/Projects";
 import { Section } from "@/components/Section";
 import { SocialLinks } from "@/components/SocialLinks";
 import CTA from "@/components/CTA";
-import { SkillCards } from "@/components/SkillCards";
 import { Metadata } from "next";
 import { getTranslation } from "./i18n";
 import arcCarousel from "@/assets/arc-carousel.webp";
@@ -13,6 +12,10 @@ import dsa from "@/assets/dsa.webp";
 import { CoverCard } from "@/components/Cards/Cover";
 import { Timeline } from "@/components/Timeline";
 import { ProfilePic } from "@/components/ProfilePic";
+import { ImpactCards } from "@/components/ImpactCards";
+import { StrengthCards } from "@/components/StrengthCards";
+import Link from "next/link";
+import { Button } from "@/components/Button";
 
 type Params = {
   params: Promise<{
@@ -38,7 +41,13 @@ export default async function Home({ params }: Params) {
           <p className="text-xl text-secondary-color lg:text-3xl">
             {t.hero.tagline}
           </p>
-          <div className="flex gap-3 mt-2">
+          <p className="max-w-2xl text-base/7 text-secondary-color md:text-lg/8">
+            {t.hero.subtitle}
+          </p>
+          <div className="flex flex-col items-center gap-3 mt-2 sm:flex-row">
+            <Link href="/#experience">
+              <Button>{t.hero.cta}</Button>
+            </Link>
             <SocialLinks />
           </div>
         </div>
@@ -57,8 +66,27 @@ export default async function Home({ params }: Params) {
             <p>{t.about.secondParagraph}</p>
           </div>
 
-          <SkillCards />
+          <div className="text-left">
+            <h3 className="text-2xl font-bold text-white">
+              {t.strengths.title}
+            </h3>
+            <p className="mt-3 text-secondary-color">{t.strengths.subtitle}</p>
+            <StrengthCards list={t.strengths.list} />
+          </div>
         </div>
+      </Section>
+
+      <Section
+        id="impact"
+        className="md:pt-28 lg:pt-36"
+        data-aos="fade-up"
+        data-aos-offset="300"
+      >
+        <Heading as="h2">{t.impact.title}</Heading>
+        <p className="max-w-3xl mx-auto mt-2 text-lg text-secondary-color">
+          {t.impact.subtitle}
+        </p>
+        <ImpactCards list={t.impact.list} />
       </Section>
 
       <Section
@@ -149,7 +177,7 @@ export default async function Home({ params }: Params) {
       </Section>
 
       <footer className="pt-10 mt-16 text-center border-t border-solid bg-card-gradient border-highlight-color text-secondary-color sm:px-6 md:px-20 backdrop-blur-xl">
-        <CTA headline={t.footer.headline} button={t.footer.button} />
+        <CTA button={t.footer.button} />
         <p className="py-8">Maurício Bruno &copy; {year}</p>
       </footer>
     </div>
@@ -162,7 +190,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 
   return {
     title: t.head.title,
-    description: t.head.title,
+    description: t.hero.subtitle,
   };
 }
 

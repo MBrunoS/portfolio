@@ -4,6 +4,7 @@ import { Public_Sans, Rubik } from "next/font/google";
 import { Navbar } from "@/components/Navbar";
 import { getTranslation } from "./i18n";
 import { AOSInit } from "@/components/AOSInit";
+import type { ReactNode } from "react";
 
 import "@/styles/globals.css";
 
@@ -20,7 +21,7 @@ const publicSans = Public_Sans({
 });
 
 type LayoutProps = {
-  children: React.ReactNode;
+  children: ReactNode;
   params: Promise<{
     locale: string;
   }>;
@@ -42,6 +43,7 @@ export default async function RootLayout({ children, params }: LayoutProps) {
         <Navbar
           links={[
             { name: t.navbar.about, href: "/#about" },
+            { name: t.navbar.impact, href: "/#impact" },
             { name: t.navbar.projects, href: "/#projects" },
             { name: t.navbar.experience, href: "/#experience" },
             { name: t.navbar.talks, href: "/#talks" },

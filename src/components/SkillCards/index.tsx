@@ -1,6 +1,6 @@
 "use client";
 import { CaretLeft, CaretRight } from "@phosphor-icons/react/dist/ssr";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import * as Icons from "../../assets/icons";
 
 const slides = [
@@ -76,7 +76,7 @@ const getPreviousIndex = (index: number) =>
 const getNextIndex = (index: number) =>
   index === slides.length - 1 ? 0 : index + 1;
 
-export const SkillCards: React.FC = () => {
+export function SkillCards() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
@@ -131,4 +131,4 @@ export const SkillCards: React.FC = () => {
       </button>
     </div>
   );
-};
+}

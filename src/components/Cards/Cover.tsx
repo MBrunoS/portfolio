@@ -1,23 +1,23 @@
 import { ArrowSquareOut } from "@phosphor-icons/react/dist/ssr";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import React from "react";
+import type { ReactNode } from "react";
 
 interface CoverCardProps {
-  children: React.ReactNode;
+  children: ReactNode;
   imgUrl: string | StaticImageData;
   title: string;
   link: string;
   className?: string;
 }
 
-export const CoverCard: React.FC<CoverCardProps> = ({
+export function CoverCard({
   children,
   imgUrl,
   title,
   link,
   className,
-}) => {
+}: CoverCardProps) {
   return (
     <div className={className}>
       <Image
@@ -42,4 +42,4 @@ export const CoverCard: React.FC<CoverCardProps> = ({
       </div>
     </div>
   );
-};
+}
