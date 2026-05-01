@@ -42,7 +42,12 @@ export const WideCard: React.FC<WideCardProps> = ({
             height: 213,
           })
         ) : (
-          <Image {...baseImgProps} placeholder="blur" />
+          <Image
+            src={baseImgProps.src}
+            alt={baseImgProps.alt}
+            className={baseImgProps.className}
+            placeholder="blur"
+          />
         )}
 
         <div className="max-sm:mt-2">{children}</div>
