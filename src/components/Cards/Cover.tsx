@@ -2,7 +2,6 @@ import { ArrowSquareOut } from "@phosphor-icons/react/dist/ssr";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import React from "react";
-import { twMerge } from "tailwind-merge";
 
 interface CoverCardProps {
   children: React.ReactNode;

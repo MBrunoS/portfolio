@@ -9,11 +9,12 @@ import { getEstimatedReadingTimeInMinutes } from "@/utils/reading-time";
 
 type Params = { locale: string; uid: string };
 
-export default async function Page({ params }: { params: Params }) {
+export default async function Page({ params }: { params: Promise<Params> }) {
+  const { locale, uid } = await params;
   const client = createClient();
   const page = await client
-    .getByUID("post", params.uid, {
-      lang: params.locale,
+    .getByUID("post", uid, {
+      lang: locale,
       fetchOptions: {
         cache: "no-store",
         next: { tags: ["prismic", "posts"] },
@@ -22,7 +23,7 @@ export default async function Page({ params }: { params: Params }) {
     .catch(() => notFound());
 
   const date = new Date(page.first_publication_date).toLocaleDateString(
-    params.locale,
+    locale,
     {
       year: "numeric",
       month: "long",
@@ -63,12 +64,13 @@ export default async function Page({ params }: { params: Params }) {
 export async function generateMetadata({
   params,
 }: {
-  params: Params;
+  params: Promise<Params>;
 }): Promise<Metadata> {
+  const { locale, uid } = await params;
   const client = createClient();
   const page = await client
-    .getByUID("post", params.uid, {
-      lang: params.locale,
+    .getByUID("post", uid, {
+      lang: locale,
       fetchOptions: {
         cache: "no-store",
         next: { tags: ["prismic", "posts"] },

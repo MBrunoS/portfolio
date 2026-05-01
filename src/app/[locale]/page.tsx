@@ -5,7 +5,7 @@ import { SocialLinks } from "@/components/SocialLinks";
 import CTA from "@/components/CTA";
 import { SkillCards } from "@/components/SkillCards";
 import { Metadata } from "next";
-import { dictionaries, getTranslation } from "./i18n";
+import { getTranslation } from "./i18n";
 import arcCarousel from "@/assets/arc-carousel.webp";
 import repowars from "@/assets/repowars.webp";
 import nextCRUDGen from "@/assets/next-crud-gen.webp";
@@ -15,13 +15,14 @@ import { Timeline } from "@/components/Timeline";
 import { ProfilePic } from "@/components/ProfilePic";
 
 type Params = {
-  params: {
-    locale: keyof typeof dictionaries;
-  };
+  params: Promise<{
+    locale: string;
+  }>;
 };
 
 export default async function Home({ params }: Params) {
-  const t = await getTranslation(params.locale);
+  const { locale } = await params;
+  const t = await getTranslation(locale);
 
   const year = new Date().getFullYear();
 
@@ -156,7 +157,8 @@ export default async function Home({ params }: Params) {
 }
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
-  const t = await getTranslation(params.locale);
+  const { locale } = await params;
+  const t = await getTranslation(locale);
 
   return {
     title: t.head.title,

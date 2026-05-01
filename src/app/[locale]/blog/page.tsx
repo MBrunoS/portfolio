@@ -2,20 +2,21 @@ import { WideCard } from "@/components/Cards/Wide";
 import { createClient } from "@/prismicio";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { dictionaries, getTranslation } from "../i18n";
+import { getTranslation } from "../i18n";
 import Link from "next/link";
 import { Heading } from "@/components/Heading";
 import { asText } from "@prismicio/client/richtext";
 import { getEstimatedReadingTimeInMinutes } from "@/utils/reading-time";
 import { PrismicNextImage } from "@prismicio/next";
 
-type Params = { params: { locale: keyof typeof dictionaries } };
+type Params = { params: Promise<{ locale: string }> };
 
 export default async function Blog({ params }: Params) {
+  const { locale } = await params;
   const client = createClient();
   const page = await client
     .getByType("post", {
-      lang: params.locale,
+      lang: locale,
       orderings: [
         {
           field: "document.first_publication_date",
@@ -60,7 +61,7 @@ export default async function Blog({ params }: Params) {
             <p className="text-sm text-gray-400 md:text-base">
               <time dateTime={post.first_publication_date}>
                 {new Date(post.first_publication_date).toLocaleDateString(
-                  params.locale,
+                  locale,
                   {
                     year: "numeric",
                     month: "long",
@@ -81,7 +82,8 @@ export default async function Blog({ params }: Params) {
 }
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
-  const t = await getTranslation(params.locale);
+  const { locale } = await params;
+  const t = await getTranslation(locale);
 
   return {
     title: t.blog.meta_title,

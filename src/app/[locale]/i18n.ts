@@ -5,5 +5,9 @@ export const dictionaries = {
   "pt-BR": () => import("@/i18n/pt-BR.json").then((module) => module.default),
 };
 
-export const getTranslation = async (locale: keyof typeof dictionaries) =>
-  dictionaries[locale]();
+export type Locale = keyof typeof dictionaries;
+
+const isLocale = (locale: string): locale is Locale => locale in dictionaries;
+
+export const getTranslation = async (locale: string) =>
+  dictionaries[isLocale(locale) ? locale : "en-US"]();

@@ -1,4 +1,4 @@
-import { HTMLAttributes } from "react";
+import { Fragment, HTMLAttributes } from "react";
 import { twMerge } from "tailwind-merge";
 import { ExperienceCard } from "../Cards/Experience";
 
@@ -23,12 +23,12 @@ export const Timeline: React.FC<TimelineProps> = ({
     const rightExp = experiences[i + 1] ?? null;
 
     elements.push(
-      <>
-        <ExperienceCard {...leftExp} key={i} />
+      <Fragment key={`timeline-row-${i}`}>
+        <ExperienceCard {...leftExp} />
         {rightExp && (
-          <ExperienceCard {...rightExp} direction="right" key={i + 1} />
+          <ExperienceCard {...rightExp} direction="right" />
         )}
-      </>
+      </Fragment>
     );
   }
 

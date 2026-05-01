@@ -1,8 +1,9 @@
 import { PrismicNextImage } from "@prismicio/next";
 import { RichTextMapSerializer } from "@prismicio/client/richtext";
 import Link from "next/link";
+import type { ReactElement } from "react";
 
-export const components: RichTextMapSerializer<JSX.Element> = {
+export const components: RichTextMapSerializer<ReactElement> = {
   paragraph: ({ children }) => <p className="my-5">{children}</p>,
   heading1: ({ children }) => (
     <h1 className="my-2 text-4xl font-bold text-primary-color">{children}</h1>

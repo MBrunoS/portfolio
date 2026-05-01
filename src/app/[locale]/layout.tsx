@@ -2,10 +2,9 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Public_Sans, Rubik } from "next/font/google";
 import { Navbar } from "@/components/Navbar";
-import { dictionaries, getTranslation } from "./i18n";
+import { getTranslation } from "./i18n";
 import { AOSInit } from "@/components/AOSInit";
 
-import "arc-carousel/styles.css";
 import "@/styles/globals.css";
 
 const rubik = Rubik({
@@ -22,22 +21,24 @@ const publicSans = Public_Sans({
 
 type LayoutProps = {
   children: React.ReactNode;
-  params: {
-    locale: keyof typeof dictionaries;
-  };
+  params: Promise<{
+    locale: string;
+  }>;
 };
 
 export default async function RootLayout({ children, params }: LayoutProps) {
-  const t = await getTranslation(params.locale);
+  const { locale } = await params;
+  const t = await getTranslation(locale);
+
   return (
-    <html lang={params.locale}>
+    <html lang={locale}>
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <AOSInit />
       <body
         className={`${rubik.variable} ${publicSans.variable} bg-[url("/assets/backgrounds/noise.png")] bg-[#090b11]`}
       >
+        <AOSInit />
         <Navbar
           links={[
             { name: t.navbar.about, href: "/#about" },
