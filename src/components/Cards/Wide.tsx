@@ -30,7 +30,7 @@ export function WideCard({
 
   return (
     <div className="w-full lg:w-5/6" {...props}>
-      <div className="flex flex-col items-center flex-grow p-3 pb-6 border border-solid md:p-4 bg-card-gradient border-highlight-color rounded-2xl border-1 text-secondary-color md:text-left gap-x-6 md:flex-row">
+      <div className="group flex flex-col items-center gap-5 rounded-2xl border border-solid border-highlight-color bg-card-gradient p-4 pb-6 text-secondary-color transition duration-300 hover:-translate-y-0.5 hover:border-primary-color/50 hover:shadow-button md:flex-row md:items-stretch md:gap-6 md:p-5 md:text-left lg:p-6">
         {renderComponent != undefined ? (
           renderComponent({
             className: baseImgProps.className,
@@ -50,7 +50,7 @@ export function WideCard({
           />
         )}
 
-        <div className="max-sm:mt-2">{children}</div>
+        <div className="w-full max-sm:mt-2">{children}</div>
       </div>
     </div>
   );

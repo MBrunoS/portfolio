@@ -16,9 +16,10 @@ export function Button({
   if (variant === "primary") {
     return (
       <button
-        className={`inline-flex items-center bg-primary-color border border-primary-color
-                rounded-full px-4 py-2  text-white hover:shadow-button cursor-pointer
-                transition duration-300 ${className}`}
+        className={`inline-flex items-center rounded-full border border-primary-color/80
+                bg-linear-to-r from-blue-600 to-violet-600 px-5 py-2.5 font-semibold text-white
+                shadow-[0_8px_22px_rgba(37,99,235,0.35)] cursor-pointer
+                transition duration-300 hover:-translate-y-0.5 hover:brightness-110 ${className}`}
       >
         {icon && <span className="mr-2">{icon}</span>}
         {children}
@@ -27,9 +28,9 @@ export function Button({
   } else if (variant === "secondary") {
     return (
       <button
-        className={`inline-flex items-center bg-primary-color/15 border border-primary-color/25
-                rounded-full px-4 py-2  text-white/80 transition duration-300 cursor-pointer
-                hover:shadow-button hover:bg-primary-color/35 hover:border-primary-color/50
+        className={`inline-flex items-center rounded-full border border-primary-color/30 bg-primary-color/10
+                px-5 py-2.5 text-white/85 transition duration-300 cursor-pointer
+                hover:-translate-y-0.5 hover:shadow-button hover:bg-primary-color/30 hover:border-primary-color/60
                 hover:text-white/90 ${className}`}
       >
         {icon && <span className="mr-2">{icon}</span>}

@@ -18,7 +18,7 @@ export function Heading({
     return (
       <h1
         className={twMerge(
-          "text-primary-color uppercase text-4xl lg:text-6xl font-bold",
+          "bg-linear-to-r from-blue-400 via-blue-500 to-violet-500 bg-clip-text text-4xl font-extrabold uppercase text-transparent lg:text-6xl",
           className
         )}
       >
@@ -29,7 +29,7 @@ export function Heading({
   return (
     <Tag
       className={twMerge(
-        "text-primary-color uppercase text-4xl lg:text-5xl font-bold",
+        "bg-linear-to-r from-blue-400 via-blue-500 to-violet-500 bg-clip-text text-4xl font-extrabold uppercase text-transparent lg:text-5xl",
         className
       )}
     >

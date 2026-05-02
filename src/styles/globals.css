@@ -40,7 +40,7 @@
   p,
   li,
   pre {
-    @apply text-base/7 md:text-lg/7 lg:text-xl/8;
+    @apply text-base/7 md:text-lg/8;
   }
 
   @media (min-width: 50em) {
@@ -53,7 +53,7 @@
   }
 
   .backgrounds {
-    /* min-height: 100%; */
+    min-height: 100%;
     isolation: isolate;
     background:
       /*footer*/
@@ -64,5 +64,38 @@
         no-repeat,
       /*center */ var(--bg-image-subtle) center/var(--bg-gradient-size)
         no-repeat;
+  }
+
+  .hero-panel {
+    position: relative;
+    padding: 1.5rem;
+    border-radius: 1.25rem;
+    border: 1px solid rgb(var(--highlight-color) / 0.7);
+    background: linear-gradient(
+      155deg,
+      rgb(3 8 20 / 0.85) 0%,
+      rgb(14 31 64 / 0.72) 55%,
+      rgb(41 11 74 / 0.55) 100%
+    );
+    backdrop-filter: blur(8px);
+    box-shadow: 0 16px 40px rgb(0 0 0 / 0.35);
+  }
+
+  .section-panel {
+    border: 1px solid rgb(var(--highlight-color) / 0.55);
+    border-radius: 1.25rem;
+    background: linear-gradient(
+      145deg,
+      rgb(5 10 23 / 0.7) 0%,
+      rgb(10 25 50 / 0.58) 52%,
+      rgb(37 16 57 / 0.48) 100%
+    );
+    backdrop-filter: blur(6px);
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.05), 0 12px 24px rgb(0 0 0 / 0.2);
+    padding: clamp(1.2rem, 2.5vw, 2.4rem);
+  }
+
+  section {
+    scroll-margin-top: 5.5rem;
   }
 }

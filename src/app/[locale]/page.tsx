@@ -33,7 +33,7 @@ export default async function Home({ params }: Params) {
     <div className="backgrounds">
       <Section id="/" variant="hero">
         <div
-          className="flex flex-col items-center gap-3 text-center md:items-start md:text-start"
+          className="hero-panel flex flex-col items-center gap-4 text-center md:items-start md:text-start"
           data-aos="fade-right"
           data-aos-duration="200"
         >
@@ -56,7 +56,7 @@ export default async function Home({ params }: Params) {
 
       <Section id="about" variant="featured">
         <div
-          className="grid items-center lg:grid-cols-2 gap-y-8"
+          className="section-panel grid items-center gap-y-10 lg:grid-cols-2 lg:gap-x-12"
           data-aos="fade-up"
           data-aos-offset="200"
         >
@@ -78,7 +78,7 @@ export default async function Home({ params }: Params) {
 
       <Section
         id="impact"
-        className="md:pt-28 lg:pt-36"
+        className="section-panel md:pt-28 lg:pt-36"
         data-aos="fade-up"
         data-aos-offset="300"
       >
@@ -91,12 +91,12 @@ export default async function Home({ params }: Params) {
 
       <Section
         id="projects"
-        className="md:pt-28 lg:pt-36"
+        className="section-panel md:pt-28 lg:pt-36"
         data-aos="fade-up"
         data-aos-offset="300"
       >
         <Heading as="h2">{t.projects.title}</Heading>
-        <p className="mt-2 text-lg text-secondary-color">
+        <p className="mx-auto mt-3 max-w-3xl text-lg text-secondary-color">
           {t.projects.subtitle}
         </p>
         <Projects
@@ -148,9 +148,9 @@ export default async function Home({ params }: Params) {
         />
       </Section>
 
-      <Section id="experience" data-aos="fade-up" className="md:pt-28 lg:pt-36">
+      <Section id="experience" data-aos="fade-up" className="section-panel md:pt-28 lg:pt-36">
         <Heading as="h2">{t.experience.title}</Heading>
-        <p className="mt-2 mb-12 text-lg text-secondary-color">
+        <p className="mx-auto mb-12 mt-3 max-w-3xl text-lg text-secondary-color">
           {t.experience.subtitle}
         </p>
 
@@ -159,7 +159,7 @@ export default async function Home({ params }: Params) {
 
       <Section
         id="talks"
-        className="lg:pt-32"
+        className="section-panel lg:pt-32"
         data-aos="fade-up"
         data-aos-offset="300"
       >
