@@ -41,10 +41,10 @@ export default async function Home({ params }: Params) {
           <p className="text-xl text-secondary-color lg:text-3xl">
             {t.hero.tagline}
           </p>
-          <p className="max-w-2xl text-base/7 text-secondary-color md:text-lg/8">
+          <p className="max-w-2xl text-base/7 text-secondary-color md:text-lg/8 lg:max-w-3xl">
             {t.hero.subtitle}
           </p>
-          <div className="flex flex-col items-center gap-3 mt-2 sm:flex-row">
+          <div className="mt-4 flex flex-col items-center gap-3 sm:flex-row">
             <Link href="/#experience">
               <Button>{t.hero.cta}</Button>
             </Link>
@@ -56,13 +56,13 @@ export default async function Home({ params }: Params) {
 
       <Section id="about" variant="featured">
         <div
-          className="grid items-center lg:grid-cols-2 gap-y-8"
+          className="grid items-center gap-y-10 lg:grid-cols-2 lg:gap-x-14"
           data-aos="fade-up"
           data-aos-offset="200"
         >
           <div className="text-left text-secondary-color md:text-lg">
             <Heading as="h2">{t.about.title}</Heading>
-            <p className="mt-8 mb-4">{t.about.firstParagraph}</p>
+            <p className="mt-6 mb-4">{t.about.firstParagraph}</p>
             <p>{t.about.secondParagraph}</p>
           </div>
 
@@ -78,7 +78,7 @@ export default async function Home({ params }: Params) {
 
       <Section
         id="impact"
-        className="md:pt-28 lg:pt-36"
+        className="md:pt-24 lg:pt-32"
         data-aos="fade-up"
         data-aos-offset="300"
       >
@@ -91,7 +91,7 @@ export default async function Home({ params }: Params) {
 
       <Section
         id="projects"
-        className="md:pt-28 lg:pt-36"
+        className="md:pt-24 lg:pt-32"
         data-aos="fade-up"
         data-aos-offset="300"
       >
@@ -148,7 +148,7 @@ export default async function Home({ params }: Params) {
         />
       </Section>
 
-      <Section id="experience" data-aos="fade-up" className="md:pt-28 lg:pt-36">
+      <Section id="experience" data-aos="fade-up" className="md:pt-24 lg:pt-32">
         <Heading as="h2">{t.experience.title}</Heading>
         <p className="mt-2 mb-12 text-lg text-secondary-color">
           {t.experience.subtitle}
@@ -159,13 +159,13 @@ export default async function Home({ params }: Params) {
 
       <Section
         id="talks"
-        className="lg:pt-32"
+        className="md:pt-24 lg:pt-30"
         data-aos="fade-up"
         data-aos-offset="300"
       >
         <Heading as="h2">{t.talks.title}</Heading>
 
-        <div className="grid justify-center grid-cols-1 gap-8 mt-16 sm:px-12 md:max-w-2xl md:mx-auto">
+        <div className="mt-14 grid grid-cols-1 justify-center gap-8 sm:px-8 md:mx-auto md:max-w-2xl">
           <CoverCard
             title={t.talks.rendering_patterns.title}
             link="https://speakerdeck.com/mbrunos/desvendando-padroes-de-renderizacao-de-apps-web"
@@ -176,7 +176,7 @@ export default async function Home({ params }: Params) {
         </div>
       </Section>
 
-      <footer className="pt-10 mt-16 text-center border-t border-solid bg-card-gradient border-highlight-color text-secondary-color sm:px-6 md:px-20 backdrop-blur-xl">
+      <footer className="mt-20 border-t border-solid border-highlight-color/80 bg-card-gradient pt-12 text-center text-secondary-color backdrop-blur-xl sm:px-6 md:px-12 lg:px-20">
         <CTA button={t.footer.button} />
         <p className="py-8">Maurício Bruno &copy; {year}</p>
       </footer>

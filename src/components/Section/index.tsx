@@ -11,10 +11,11 @@ export function Section({
   ...props
 }: SectionProps) {
   const classNames = {
-    hero: "relative flex flex-col-reverse items-center justify-center gap-10 px-6 pb-20 md:flex-row pt-36 md:px-16 md:gap-20",
+    hero: "relative flex flex-col-reverse items-center justify-center gap-10 px-6 pb-20 md:flex-row pt-32 md:px-12 md:gap-16 lg:px-20 lg:pt-36",
     featured:
-      "px-4 py-16 border-solid sm:px-6 md:px-20 bg-card-gradient border-y border-highlight-color",
-    simple: "text-center pt-16 px-4 sm:px-6 md:px-20 max-w-[1400px] mx-auto",
+      "px-4 py-18 border-solid sm:px-6 md:px-12 lg:px-20 bg-card-gradient border-y border-highlight-color",
+    simple:
+      "text-center pt-20 px-4 sm:px-6 md:px-12 lg:px-20 max-w-[1280px] mx-auto",
   };
 
   return (

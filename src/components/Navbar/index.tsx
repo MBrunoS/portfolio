@@ -37,8 +37,8 @@ export function Navbar({ links }: NavbarProps) {
     <NavigationMenu.Root className="fixed z-10 w-full" data-aos="fade-down">
       <NavigationMenu.List
         className={twMerge(
-          "flex flex-row items-center justify-between gap-2 p-4 md:px-12 lg:px-20 md:py-10 transition-all",
-          isScrolling && "py-3 gap-y-1 md:py-5 bg-zinc-900/60 backdrop-blur-md"
+          "flex flex-row items-center justify-between gap-2 p-4 md:px-12 lg:px-20 md:py-8 transition-all duration-300",
+          isScrolling && "py-3 gap-y-1 md:py-4 bg-zinc-950/75 backdrop-blur-xl border-b border-highlight-color/60"
         )}
       >
         <NavigationMenu.Item>
@@ -53,16 +53,16 @@ export function Navbar({ links }: NavbarProps) {
 
         <div
           className={twMerge(
-            "hidden md:flex gap-4 px-4 transition-border",
+            "hidden md:flex gap-5 px-6 transition-all text-[0.95rem]",
             !isScrolling &&
-              "py-2 rounded-full border border-primary-color bg-zinc-900/60 shadow-md shadow-gray-50/20"
+              "py-2.5 rounded-full border border-highlight-color bg-zinc-950/65 shadow-lg shadow-primary-color/10 backdrop-blur-lg"
           )}
         >
           {links.map((link) => (
             <NavigationMenu.Item key={link.name}>
               <NavigationMenu.Link
                 href={link.href}
-                className="text-secondary-color hover:text-primary-color"
+                className="text-secondary-color transition-colors hover:text-primary-color"
               >
                 {link.name}
               </NavigationMenu.Link>
@@ -71,20 +71,19 @@ export function Navbar({ links }: NavbarProps) {
 
           <Separator.Root
             orientation="vertical"
-            className="w-px mx-1 bg-primary-color"
+            className="w-px mx-1 bg-highlight-color"
           />
 
           <NavigationMenu.Item>
             <NavigationMenu.Link
               href="/blog"
-              className="text-secondary-color hover:text-primary-color"
+              className="text-secondary-color transition-colors hover:text-primary-color"
             >
               Blog
             </NavigationMenu.Link>
           </NavigationMenu.Item>
         </div>
 
-        {/* Mobile (small) nav */}
         <div className="md:hidden">
           <NavigationMenu.Item>
             <NavigationMenu.Trigger className="w-6 h-6">
@@ -93,7 +92,7 @@ export function Navbar({ links }: NavbarProps) {
 
             <NavigationMenu.Content
               className={twMerge(
-                "w-fit px-4 py-2 text-left rounded-lg bg-zinc-900/60 backdrop-blur-md ml-auto mr-3 border border-highlight-color transition-transform",
+                "w-fit px-4 py-2 text-left rounded-lg bg-zinc-900/80 backdrop-blur-md ml-auto mr-3 border border-highlight-color transition-transform",
                 isScrolling && "translate-y-2"
               )}
             >

@@ -22,7 +22,7 @@ type ProjectsProps = {
 
 export function Projects({ list, labels }: ProjectsProps) {
   return (
-    <div className="flex flex-col items-center justify-around gap-4 mt-8 md:mt-16 md:gap-8">
+    <div className="mt-10 flex flex-col items-center justify-around gap-6 md:mt-14 md:gap-10">
       {list.map((project) => (
         <WideCard
           img={{ src: project.imgSrc, alt: project.title }}
@@ -38,7 +38,7 @@ export function Projects({ list, labels }: ProjectsProps) {
               {project.badges.map((badge, i) => (
                 <p
                   key={i}
-                  className="px-2 py-1 text-xs border border-solid rounded-full last:mr-0 border-primary-color"
+                  className="rounded-full border border-primary-color/75 px-2.5 py-1 text-xs font-medium text-secondary-color last:mr-0"
                 >
                   {badge}
                 </p>
@@ -46,7 +46,7 @@ export function Projects({ list, labels }: ProjectsProps) {
             </div>
           </div>
 
-          <p className="px-2 mt-2 mb-4 text-base md:px-0">
+          <p className="mt-3 mb-5 px-2 text-base md:px-0">
             {project.description}
           </p>
 
