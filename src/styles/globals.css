@@ -40,7 +40,7 @@
   p,
   li,
   pre {
-    @apply text-base/7 md:text-lg/7 lg:text-xl/8;
+    @apply text-base/7 md:text-lg/8;
   }
 
   @media (min-width: 50em) {
@@ -53,7 +53,7 @@
   }
 
   .backgrounds {
-    /* min-height: 100%; */
+    min-height: 100%;
     isolation: isolate;
     background:
       /*footer*/
@@ -64,5 +64,9 @@
         no-repeat,
       /*center */ var(--bg-image-subtle) center/var(--bg-gradient-size)
         no-repeat;
+  }
+
+  section {
+    scroll-margin-top: 5.5rem;
   }
 }
